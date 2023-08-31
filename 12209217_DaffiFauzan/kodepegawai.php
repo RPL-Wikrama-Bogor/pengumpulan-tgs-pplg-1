@@ -15,6 +15,13 @@
             font-family: Pangram-ExtraLight;
             src: url(font/PangramSans-FreeForPersonalUse/Pangram-FullFamily-FreeForPersonalUse/Pangram-Regular.otf);
         }
+        
+        body {
+            background-image: linear-gradient(gray, white);
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
 
         form {
             box-shadow: black 5px 5px 3px;
@@ -45,13 +52,16 @@
 
         .hasil{
             font-size: 30px;
+            position: absolute;
             display: flex;
             box-shadow: black 5px 5px 3px;
-            text-align: center;
+            align-items: center;
             flex-direction: column;
+            padding-top: 60px;
+            top: 50px;
+            right: 100px;
             width: 450px;
-            height: 400px;
-            margin-top: 50px;
+            height: 200px;
             margin-left: 450px;
             border-radius: 10px;
             background: white;
@@ -77,6 +87,8 @@
 </head>
 <body>
     
+
+
     <form method="post" action="#">     
     <h1 align="center">Kode Pegawai</h1>
     <div class="kolom">
