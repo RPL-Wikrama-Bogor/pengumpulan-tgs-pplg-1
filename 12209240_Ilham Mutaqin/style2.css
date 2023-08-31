@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    margin: 0;
+}
+
+.image-content {
+    position: relative; /* Make the container relative for absolute positioning */
+}
+
+.image-button {
+    top: 20px;
+    right: 20px; 
+    padding: 10px 20px;
+    margin-left: 650px;
+    background-color: khaki;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+img {
+    width: 600px;
+    height: auto;
+    margin-left: 175px;
+    margin-top: 10px;
+}
+.text-content {
+    margin-right: 25px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+p {
+    
+    text-align: justify;
+    font-size: 18px;
+}
+
+.box {
+    display: flex;
+}
+
+.mini-box {
+    margin-right: 10px;
+    background-color: khaki;
+    text-align: center;
+    width: 750px;
+    height: 100px;
+    margin-top: 50px;
+}
+.mini-box p{
+    text-align: center;
+    width: auto;
+    height: fit-content;
+    margin: 30px;
+}
+
+.container-card {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi ruang menjadi dua kolom */
+    gap: 20px; /* Jarak antara kolom */
+    margin-top: 20px;
+}
+
+/* Gaya untuk setiap card di dalam container-card */
+.card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content, .image {
+        flex: 100%;
+    }
+}
+
+/* Responsif untuk screen pad */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        flex: 60%;
+        margin-right: 20px;
+    }
+
+    .image {
+        flex: 40%;
+    }
+}
+
+/* Responsif untuk screen monitor */
+@media (min-width: 1024px) {
+    .content {
+        flex: 70%;
+        margin-right: 20px;
+    }
+
+    .image {
+        flex: 30%;
+    }
+}

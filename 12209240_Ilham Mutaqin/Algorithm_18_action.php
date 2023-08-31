@@ -1,4 +1,4 @@
-<?php
+90000000000000000000000000000090000000<?php
     $mtk = $_POST['mtk'];
     $indo = $_POST['indo'];
     $ingg = $_POST['ingg'];
