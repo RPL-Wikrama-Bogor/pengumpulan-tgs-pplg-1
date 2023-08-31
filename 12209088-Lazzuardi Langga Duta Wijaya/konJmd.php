@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 
     $jam = $waktu / 3600;
     $waktu %= $jam * 3600;
-    $menit = 
+    $menit ;
     
 
     echo "Maka hasilnya adalah : " . $hasil;
