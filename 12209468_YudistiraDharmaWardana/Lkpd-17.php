@@ -18,7 +18,6 @@ $r_r;
 
 <form action="">
 
-<?= 
 
 ?>
 <input type="text">
