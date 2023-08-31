@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh;
+}
+h2 {
+    color: #333;
+}
+form {
+    margin-bottom: 20px;
+    width: fit-content;
+}
+input[type="text"] {
+    padding: 5px;
+}
+input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+.result {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #e0e0e0; /* Light gray background color */
+    width: 400px;
+    text-align: center; /* Center text within result box */
+}
+.error {
+    color: red;
+}
