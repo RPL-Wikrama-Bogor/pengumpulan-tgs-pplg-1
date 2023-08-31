@@ -41,7 +41,7 @@
     <div class="card">
         <h2>Kode Pegawai</h2>
         <div class="card-body">
-            <form method="post" action="#">
+            <form method="post" action="">
                 <table>
                     <tr>
                         <td>Kode Pegawai</td>
@@ -106,6 +106,7 @@
                 echo "<br>";
             }
             else {
+                echo "<br>";
                 echo "Kode Pegawai Tidak Sesuai<br>Inputkan 11 Angka Kode Pegawai";
             }
 
