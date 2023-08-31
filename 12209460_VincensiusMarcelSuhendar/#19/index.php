@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue">
     <title>Penghasilan Penjualan Tiket Bioskop</title>
 </head>
 <body>
+    <div class="box">
     <h2>Penghasilan Penjualan Tiket Bioskop</h2>
     <form action="" method="post">
         <h3>Kelas VIP</h3>
@@ -18,7 +24,6 @@
         <br>
         <input type="submit" name="submit" value="Hitung Penghasilan">
     </form>
-
     <?php
     if (isset($_POST['submit'])) {
         $tiket_vip = $_POST['tiket_vip'];
@@ -57,5 +62,6 @@
         echo "Total Keuntungan: $" . number_format($total_keuntungan, 2);
     }
     ?>
+    </div>
 </body>
 </html>
