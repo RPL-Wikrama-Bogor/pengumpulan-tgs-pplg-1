@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue">
-    <title>Pencarian Juara Kelas</title>
+    <title>Juara Kelas</title>
 </head>
 <body>
     <div class="box">
-        <h2>Pencarian Juara Kelas</h2>
+        <h2>Siapa juara kelas kita?</h2>
         <form action="" method="post">
             <?php
-            $mataPelajaran = array("MTK", "INDO", "INGG", "DPK", "Agama");
+            $mataPel = array("MTK", "INDO", "ENGL", "DPK", "Agama");
             $siswaCount = 15;
             
             for ($i = 1; $i <= $siswaCount; $i++) {
                 echo "<h3>Siswa ke-$i</h3>";
                 echo "Nama: <input type='text' name='nama[]' required><br>";
     
-                foreach ($mataPelajaran as $mapel) {
+                foreach ($mataPel as $mapel) {
                     echo "$mapel: <input type='number' name='nilai[$i][$mapel]' required><br>";
                 }
     
-                echo "Kehadiran (persentase): <input type='number' name='kehadiran[$i]' required><br>";
+                echo "Kehadiran (%): <input type='number' name='kehadiran[$i]' required><br>";
                 echo "<br>";
             }
             ?>
@@ -48,7 +48,7 @@
         }
 
         if (empty($juaraKelas)) {
-            echo "<h3>Tidak ada juara kelas yang memenuhi kriteria</h3>";
+            echo "<h3>Tidak ada juara kelas yang memenuhi persyaratan</h3>";
         } else {
             arsort($juaraKelas);
             $juara = key($juaraKelas);
