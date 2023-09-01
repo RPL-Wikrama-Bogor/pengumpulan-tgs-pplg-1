@@ -16,22 +16,21 @@ $tanggal_lahir;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style/11.css?v2">
 </head>
 <body>
-  <form action="" method="post">
-    <table>
-      <tr>
-        <td>Input Nomor Pegawai</td>
-        <td><input type="number" name="no_pegawai"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button type="submit" name="submit">Submit</button></td>
-      </tr>
-    </table>
-  </form>
-</body>
-<?php
+  <div class="container">
+    <div class="card">
+
+      <h2>Muhamad Fadly Alviansyah</h2>
+
+      <form action="" method="post">
+        <label for="no">Input nomor pegawai</label>
+        <input type="number" id="no" name="no_pegawai">
+        <button type="submit" name="submit">Submit</button>
+      </form>
+
+      <?php
 
 if(isset($_POST['submit'])){
   $no_pegawai = $_POST['no_pegawai'];
@@ -73,11 +72,16 @@ if(isset($_POST['submit'])){
 
   $tanggal_lahir = $tanggal ." ". $bulan ." ". $tahun;
 
-  echo "No Golongan: $no_golongan <br> Tanggal Lahir: $tanggal_lahir <br> No Urutan: $no_urutan";
+  echo "No. Golongan: $no_golongan <br> Tanggal Lahir: $tanggal_lahir <br> No. Urutan: $no_urutan";
   }
 
   
 }
 
 ?>
+
+    </div>
+  </div>
+</body>
+
 </html>
