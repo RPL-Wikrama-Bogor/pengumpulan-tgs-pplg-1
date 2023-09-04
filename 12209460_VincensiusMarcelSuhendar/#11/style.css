@@ -57,7 +57,7 @@ body{
     margin: auto;
 }
 
-input[type="number"] {
+input[type="number"]{
     width: 100%;
     padding: 10px;
     border: 1px solid black;
