@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        .adm {
+            float: right;
+            background-color: #fcbf49;
+            color: black;
+            border-radius: 50px;
+            margin-top: 0;
+            border: none;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        h1{
+            margin-left: 30px;
+        }
+        p{
+            margin-left: 20px;
+        }
+        img{
+            width: 500px;
+            max-width: 100%;
+            height: fit-content;
+            float: right; 
+            margin-top: 20px;
+        }
+        .baris{
+            box-sizing: border-box;
+			padding: 20px;
+            margin-top: 100px;
+        }
+        .kolom{
+            height: 100px;
+            background-color: #fcbf49;
+            margin: 3px;
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            width: 295px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .kolom1,.kolom2, .kolom3, .kolom4{
+            float: left;
+        }
+        footer {
+            background-color:#fcbf49; 
+            color: #fff;
+            text-align: center;
+            padding: 10px; 
+        }
+        .form-laporan{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 40px;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #e7e5e4;
+        }
+
+        .laporan p {
+            text-align: end;
+            margin-bottom: 10px;
+        }
+
+        .laporan {
+            flex: 1;
+            padding-left: 20px; 
+            background-color: #fff;
+            padding: 28px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .konten {
+            border: 1px solid black;
+            max-width: 100%;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        .box-laporan {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .laporan-img img {
+            flex: 1;
+        }
+
+        .text {
+            margin-right: 10px;
+            max-width: 100%;
+        }
+            
+
+        .form-laporan h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        }
+
+        .form-laporan label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        }
+
+        .form-laporan input[type="text"],
+        .form-laporan input[type="number"],
+        .form-laporan textarea {
+        width: 500px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        }
+
+        .form-laporan input[type="file"] {
+        margin-bottom: 15px;
+        }
+
+        .form-laporan input[type="submit"] {
+        background-color:#fcbf49;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        float: right;
+        }
+
+        .form-laporan input[type="submit"]:hover {
+        background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="adm"><b>Administrator</b></button>
+    <br>
+    <img src="img/gambar.png">
+    <h1>Pengaduan Masyarakat</h1>
+    <div class="container">
+        <p>1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias modi nemo beatae omnis fugit!</p>
+        <p>2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, debitis?</p>
+        <p>3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eligendi et atque dolores veniam maiores quasi error deserunt ducimus delectus?</p>
+        <p>4. Lorem ipsum, dolor sit amett</p>
+</div>
+    
+    <section class="baris flex-container">
+        <div class="kolom kolom1">
+            <p>Jumlah Kecamatan</p>
+             <p>15</p>
+        </div>
+        <div class="kolom kolom2">
+            <p>Jumlah Desa</p> 
+            <p>42</p>
+        </div>
+        <div class="kolom kolom3">
+            <p>Jumlah penduduk</p> 
+            <p>12.000</p>
+        </div>
+        <div class="kolom kolom4">
+            <p>Data per Tahun</p> 
+            <p>2023</p>
+        </div>
+        <br>
+
+        <section class="form-laporan">
+            <div class="form-section">
+              <form action="">
+                <h2>Buat Pengaduan</h2>
+                <label for="nik">NIK :</label><br>
+                <input type="number" id="nik" name="nik" class cols="70" /><br>
+      
+                <label for="nama">Nama Lengkap :</label><br>
+                <input type="text" id="nama" name="nama" class cols="70"/><br>
+      
+                <label for="noTelp">No Telp :</label><br>
+                <input type="text" id="noTelp" name="noTelp" class cols="70" /><br>
+      
+                <label for="pengaduan">Pengaduan :</label><br>
+                <textarea id="pengaduan" name="pengaduan" cols="70" rows="6"></textarea><br>
+      
+                <label for="gambar">Upload Gambar Terkait :</label><br>
+                <input type="file" id="gambar" name="gambar" /><br><br>
+      
+                <input type="submit" value="Kirim"></input>
+              </form>
+            </div>
+      <br> 
+
+  
+        <div class="laporan">
+          <h2>Laporan Pengaduan</h2>
+          <div class="konten">
+            <p>2 September 2023: Fema Flamelina Putri</p>
+            <div class="box-laporan">
+              <div class="text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    libero omnis voluptates, repellat neque et perferendis officiis,
+                    molestias nisi quo dolore debitis facilis, officia sint! Dolore
+                    dolor quae ratione dolorem?
+                  </p>
+              </div>
+  
+              <div class="laporan-img">
+                <img src="img/Hyundai_Komponen_Mobil_utamaaa.jpg" width="250" height="150" alt="Poto Laporan"/>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="konten">
+            <p>2 September 2023: Fema Flamelina Putri</p>
+            <div class="box-laporan">
+              <div class="text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    libero omnis voluptates, repellat neque et perferendis officiis,
+                    molestias nisi quo dolore debitis facilis, officia sint! Dolore
+                    dolor quae ratione dolorem?
+                  </p>
+              </div>
+  
+              <div class="laporan-img">
+                <img src="img/Hyundai_Komponen_Mobil_utamaaa.jpg" width="250" height="150" alt="Poto Laporan"/>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        &copy; 2023 Nama Perusahaan Anda. Hak Cipta Dilindungi.
+    </footer>
+</body>
+</html>
