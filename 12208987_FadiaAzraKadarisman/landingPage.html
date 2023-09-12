@@ -148,7 +148,64 @@
         background-color: #0056b3;
         }
 
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px; /* Adjust the font size for smaller screens */
+            }
 
+            .adm {
+                float: none;
+                margin-top: 10px;
+            }
+
+            img {
+                width: 100%;
+                float: none;
+                margin-top: 10px;
+            }
+
+            h1 {
+                margin-left: 0;
+                text-align: center; /* Center align the heading on small screens */
+            }
+
+            p {
+                margin-left: 0;
+            }
+
+            .baris {
+                margin-top: 20px; /* Adjust the margin-top for spacing on smaller screens */
+            }
+
+            .kolom {
+                float: none;
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .form-laporan {
+                flex-direction: column; /* Stack form elements vertically on small screens */
+                padding: 20px;
+            }
+
+            .form-section {
+                margin-bottom: 10px;
+            }
+
+            .form-laporan input[type="text"],
+            .form-laporan input[type="number"],
+            .form-laporan textarea {
+                width: 100%;
+            }
+
+            .laporan {
+                padding: 10px;
+            }
+
+            .laporan-img img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -249,7 +306,7 @@
         </div>
       </section>
       <footer>
-        &copy; 2023 Nama Perusahaan Anda. Hak Cipta Dilindungi.
+        &copy; 2023 Fadia Azra K.
     </footer>
 </body>
 </html>
