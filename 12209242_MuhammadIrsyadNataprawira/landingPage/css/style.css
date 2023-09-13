@@ -109,10 +109,6 @@ button {
   padding: 12px;
   border-radius: 10px;
   transition: .3s ease-in-out;
-  -webkit-transition: .3s ease-in-out;
-  -moz-transition: .3s ease-in-out;
-  -ms-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
   background-color: #dbb90d;
 }
 
