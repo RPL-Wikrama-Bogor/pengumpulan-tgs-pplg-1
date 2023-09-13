@@ -20,7 +20,7 @@
 
     <?php 
 
-    $avg;
+    $nilai;
     $mtk;
     $pabp;
     $dpk;
@@ -30,27 +30,27 @@
         $pabp = $_POST['pabp'];
         $dpk = $_POST['dpk'];
 
-        $avg = ($mtk + $pabp + $dpk) / 3;
+        $nilai = ($mtk + $pabp + $dpk) / 3;
 
-        if ($avg > 100){
+        if ($nilai > 100){
             echo("K");
         }
-        else if ($avg >= 80){
+        else if ($nilai >= 80){
             echo("A");
         }
-        else if ($avg >= 75){
+        else if ($nilai >= 75){
             echo("B");
         }
-        else if ($avg >= 65){
+        else if ($nilai >= 65){
             echo("C");
         }
-        else if ($avg >= 45){
+        else if ($nilai >= 45){
             echo("D");
         }
-        else if ($avg >= 0){
+        else if ($nilai >= 0){
             echo("E");
         }
-        else if ($avg > 100){
+        else if ($nilai > 100){
             echo("K");
         }
         else{
