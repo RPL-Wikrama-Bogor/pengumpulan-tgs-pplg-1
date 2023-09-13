@@ -1,54 +1,73 @@
-<?php 
-$list_film = [
-    [
-        "judul" => "John Wick",
-        "min_usia" => 18,
-        "harga" => 30000
-    ],
-    [
-        "judul" => "Your Name.",
-        "min_usia" => 15,
-        "harga" => 40000
-    ],
-    [
-        "judul" => "Weathering With You",
-        "min_usia" => 17,
-        "harga" => 35000
-    ]
-    ];
-?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bioskop Vinser</title>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="number" name="usia" id="" placeholder="Masukkan usia...">
-        <select name="judul[]" id="">
-            <option disabled hidden>- - - Pilih Judul Film - - -</option>
-            <?php foreach($list_film as $key => $item) : ?>
-                <option value="<?= $key; ?>"><?= $item['judul']; ?></option>
-            <?php endforeach ?>
-        </select>
-        <button type="submit" name="beli">Beli</button>
-    </form>
 
-    <?php 
-    if(isset($_POST['beli'])) {
-        $usia = $_POST['usia'];
-        $arrayID = $_POST['judul'];
-        $minUsia = $list_film[$arrayID]['min_usia'];
-        $harga = $list_film[$arrayID]['harga'];
+    <?php
+    $movies = [
+        [
+            "judul" => "Barbenheimer",
+            "min-age" => 15,
+            "harga" => 45000
+        ],
+        [
+            "judul" => "Touhou: Schism",
+            "min-age" => 17,
+            "harga" => 35000
+        ],
+        [
+            "judul" => "The Chosen",
+            "min-age" => 7,
+            "harga" => 35000
+        ]
+    ];
+    ?>
+    <center>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>Please state your age.</td>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Movie</td>
+                    <td>
+                        <select name="judul">
+                            <option hidden>Which movie would you like?</option>
+                            <?php
+                            foreach ($movies as $key => $film) {
+                            ?>
+                                <option value="<?= $key ?>"><?= $film['judul'] ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="save" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
 
-        if($usia < $minUsia) {
-            echo "<h4 style='color: red'> Usia belum cukup </h4>";
+<?php
+    if (isset($_POST['save'])) {
+        $age = $_POST['age'];
+        $movieId = $_POST['judul'];
+        $minage = $movies[$movieId]['min-age'];
+        $harga = $movies[$movieId]['harga'];
+
+        if ($age > $minage) {
+            echo "<h3 style='text-align: center;'>It is Rp. " . number_format($harga, 2, ',', '.') . " for the film.</h2>";
         } else {
-            echo "<h4 style='color: green'> Harga yang harus dibayar Rp. " . number_format($harga, 2, ',', '.') . "</h4>";
+            echo "<h3 style='text-align: center;'>I'm sorry, but you are too young.</h2>";
         }
     }
     ?>
-</body>
-</html>
