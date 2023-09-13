@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Soal 19</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
@@ -62,6 +62,7 @@
             text-shadow: 3px 3px 3px #ababab;
             position: center;
             width: 100%;
+            text-align : center;
         }
 
         input{
@@ -118,19 +119,24 @@
 <body>
   <div class="container">
     <div class="content">
-      <h3>- Penjualan Tiket -</h3><br>
+      <h3>- Penjualan Tiket -</h3><br><br>
 
     <form action="" method="post">
-      <label for="vip">Input penjualan tiket VIP</label>
-      <input type="number" name="vip" id="vip"required>
-      <br>
-      <label for="eks">Input penjualan tiket Eksekutif</label>
-      <input type="number" name="eksekutif" id="eks" required>
-      <br>
-      <label for="eko">Input penjualan tiket Ekonomi</label>
-      <input type="number" name="ekonomi" id="eko" required>
-      <br><br>
-      <button type="submit" name="submit">Submit</button>
+      <table>
+        <tr>
+          <td><label for="vip">Input penjualan tiket VIP</label> </td>
+          <td><input type="number" name="vip" id="vip"required></td>
+        </tr>
+        <tr>
+          <td><label for="eks">Input penjualan tiket Eksekutif</label></td>
+          <td><input type="number" name="eksekutif" id="eks" required></td>      
+        </tr>
+        <tr>
+          <td><label for="eko">Input penjualan tiket Ekonomi</label></td>
+          <td><input type="number" name="ekonomi" id="eko" required> </td>
+        </tr>
+      </table> <br> <br>
+          <button type="submit" name="submit">Submit</button>
     </form>
     <?php
 
@@ -169,6 +175,7 @@ if(isset($_POST['submit'])){
     echo "Tidak Valid";
   }
 
+  echo "<h2> List keuntungan </h2> <br>";
   echo "Keuntungan tiket VIP = " . $untungVip . "% <br>";
   echo "Keuntungan tiket Eksekutif = " . $untungEksekutif . "% <br>";
   echo "Keuntungan tiket Ekonomi = " . $untungEkonomi . "% <br>";

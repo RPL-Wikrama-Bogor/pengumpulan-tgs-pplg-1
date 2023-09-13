@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mencetak bilangan terbesar, terkecil dan rata-rata dari bilangan</title>
+    <title>soal 17</title>
 </head>
 <body>
     <h1>Mencetak bilangan terbesar, terkecil dan rata-rata dari 20 bilangan</h1>

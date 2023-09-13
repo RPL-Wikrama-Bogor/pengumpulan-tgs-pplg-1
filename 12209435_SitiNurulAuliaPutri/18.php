@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soal 18</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -15,7 +15,7 @@
 }
 
 body{
-  background-color: #14213d;
+  background-color: #EF9595;
 }
 
 .container{
@@ -30,8 +30,8 @@ body{
   width: 70%;
   padding: 30px;
   border-radius: 30px;
-  background-color: #e5e5e5;
-  border: 7px solid #fca311;
+  background-color: #EFD595;
+  border: 7px solid #EFB495;
 }
 
 
@@ -55,7 +55,7 @@ input{
 
 button{
   margin: 20px 0;
-  background-color: #fca311;
+  background-color: #EBEF95;
   padding: 7px;
   border-radius: 10px;
 }
