@@ -16,20 +16,26 @@ $tanggal_lahir;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form action="" method="post">
-    <table>
-      <tr>
-        <td>Input Nomor Pegawai</td>
-        <td><input type="number" name="no_pegawai" placeholder="input kode" required>></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button type="submit" name="submit">Submit</button></td>
-      </tr>
-    </table>
-  </form>
+   <div class="container">
+    <h1>Input!</h1>
+<div class="formm">
+    <form action="#" method="post">
+        
+                <label for="kode"><b>kode pegawai :</b></label>
+                <br>
+                <input type="number" name="no_pegawai" placeholder="input jam...">
+            
+<br>
+<br>
+
+        <button type="submit" name="submit">Kirim!</button>
+       
+    </form>
+    </div>
+    </div>
 </body>
 <?php
 
@@ -68,8 +74,14 @@ if(isset($_POST['submit'])){
     $bulan = "Oktober";
   }elseif($bulan == "11"){
     $bulan = "November";
-  }else{
+  }elseif($bulan == "12"){
     $bulan = "Desember";
+  }else{
+    $bulan = "Bulan tidak tersedia";
+  }
+
+  if($tanggal >= 31){
+    $tanggal = "tidak tersedia";
   }
 
   $tanggal_lahir = $tanggal ." ". $bulan ." ". $tahun;

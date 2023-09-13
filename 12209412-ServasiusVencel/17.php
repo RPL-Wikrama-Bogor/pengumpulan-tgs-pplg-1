@@ -1,10 +1,8 @@
 <?php
-
-$i; 
-$terbesar; 
+$i;
+$terbesar;
 $terkecil;
-$r_r;
-
+$rata;
 ?>
 
 <!DOCTYPE html>
@@ -15,18 +13,12 @@ $r_r;
     <title>Document</title>
 </head>
 <body>
-
-<form action="">
-
-<?= 
-
-?>
-<input type="text">
-
-
-
-
-</form>
-
+    <form action="" method="post">
+        <?php 
+        for($i = 1; $i <= 20; $i++){
+            
+        }
+        ?>
+    </form>
 </body>
-</html>  
+</html>
