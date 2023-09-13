@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ddd;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .admin-button {
+    padding: 10px 20px;
+    background-color: #da960f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-image {
+    flex: 1;
+    margin-left: 40px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .box-size{
+    flex: 1;
+    margin-left: 40px;
+  }
+
+  .box-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .box {
+    flex: 1;
+    padding: 50px;
+    border: 1px;
+    background-color: #da960f;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  .box-bottom {
+    flex: 1;
+    padding: 50px;
+    background-color: #ffffff;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .form {
+    flex: 1;
+    padding: 75px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .form input,
+  .form textarea,
+  .form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px; 
+  }
+  .box-section-bottom {
+    display: flex;
+    flex-direction: grid;
+    justify-content: space-around;
+  }
+
+  .image-bottom{
+    flex: 1;
+    margin-left: 40px;
+  }
+
+  .image-bottom img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+    }
+  
+    .hero-image {
+      margin-left: 0;
+      margin-top: 20px;
+      
+    }
+  
+    .box-section {
+      flex-direction: grid;
+    }
+
+    .form{
+      margin-bottom :40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .hero-section {
+      flex-direction: column;
+    }
+  
+    .hero-image {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    .box{
+      width: 250px;
+      margin: 10px 10px;
+    }
+
+    .box-bottom{
+      width: 350px;
+    }
+  
+    .box-section {
+      flex-direction: column;
+    }
+
+    .image-bottom img{
+      max-width: 300px;
+      height: 75px;
+    }
+  }
+  

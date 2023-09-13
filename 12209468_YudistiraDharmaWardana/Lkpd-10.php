@@ -16,7 +16,7 @@ $r_r
 </head>
 <body>
     
-<h1>Lkpd Algoritma 3 </h1>
+<h1>Lkpd Algoritma 10</h1>
     <form action="" method="post">
         <table>
             <tr>
