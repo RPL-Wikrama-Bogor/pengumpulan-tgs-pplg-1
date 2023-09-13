@@ -45,12 +45,12 @@ $items = [
 <body>
     <form action="" method="post">
         <ul>
-            <li><button type="submit" name="submits">Cari Yang Sedang Diskon</button></li>
             <li>
                 <label for="">Cari Berdasarkan Barang : </label>
                 <input type="text" name="barang">
                 <input type="submit" name="submit">
             </li>
+            <li><button type="submit" name="submits">Cari Yang Sedang Diskon</button></li>
         </ul>
     </form>
     <?php
@@ -64,7 +64,7 @@ $items = [
             }
         }
     }
-    if (isset($hasilPencarian)) {
+    if (isset($hasilPencarian) && count($hasilPencarian) > 0) {
         foreach ($hasilPencarian as $hasil) {
 
             echo "Barang : " . $hasil['barang'] . " ";
