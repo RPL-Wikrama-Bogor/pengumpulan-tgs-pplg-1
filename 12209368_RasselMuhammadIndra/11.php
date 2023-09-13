@@ -1,15 +1,70 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
   }
 
-  p {
-    text-align: center;
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    min-height: 100vh;
+    background: linear-gradient(45deg, gray, white);
+  }
 
+  h2 {
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    clear: left;
+  }
+
+  .base {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .form {
+    width: 65%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .form h3 {
+    margin-top: 10px;
+  }
+
+  .form input[type='text'],
+  .form input[type='number'] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .form input[type='submit'] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .form input[type='submit']:hover {
+    background-color: #0056b3;
   }
 </style>
 <!DOCTYPE html>
@@ -22,21 +77,19 @@
 </head>
 
 <body>
-  <h1>Employee</h1>
-  <div class="form">
-    <form action="" method="post">
-      <table>
-        <tr>
-          <td>Employee Number : </td>
-          <td><input type="text" name="employee"></td>
-        </tr>
-        <tr>
-          <td><button type="submit" name="submit">Submit</button></td>
-        </tr>
-      </table>
-    </form>
+  <h2>Employee</h2>
+  <div class="base">
+    <div class="form">
+      <form action="" method="post">
+        <h3>Employee Number : </h3><br>
+        <input type="text" name="employee"><br>
+        <button type="submit" name="submit">Submit</button>
+      </form>
+    </div>
   </div>
-  <p><?php
+  <div class="base">
+    <p>
+      <?php
       $employee_num;
       $class_num;
       $day;
@@ -85,7 +138,9 @@
           echo "Employee Number is does not match";
         }
       }
-      ?></p>
+      ?>
+    </p>
+  </div>
 </body>
 
 </html>
