@@ -112,16 +112,16 @@
             border-radius: 5px;
         }
         input[type="submit"] {
-            background-color: #0F2C59;
+            background-color: black;
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 15px;
+            border-radius: 5px;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #8ECDDD;
+            background-color: #333;
         }
 
         .box{
