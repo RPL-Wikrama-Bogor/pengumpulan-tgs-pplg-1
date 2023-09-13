@@ -2,35 +2,21 @@
 
 $listFilm = [
   [
-    "judul" => "Film 1",
-    "min" => 15,
+    "judul" => "Azab",
+    "min" => 1,
     "harga" => 40000
   ],
   [
-    "judul" => "Film 2",
+    "judul" => "Tukang Haji Makan Bubur",
     "min" => 16,
     "harga" => 45000
   ],
   [
-    "judul" => "Film 3",
+    "judul" => "Preman Belum Pensiun",
     "min" => 17,
     "harga" => 50000
   ]
 ];
-
-if(isset($_POST['submit'])){
-  $age = $_POST['umur'];
-  $idFilm = $_POST['film'];
-
-  $minAge = $listFilm[$idFilm]["min"];
-  $price = $listFilm[$idFilm]["harga"];
-
-  if($age >= $minAge){
-    echo "Silahkan untuk membayar sebesar Rp." . number_format($price, 2, ',', '.');
-  }else{
-    echo "Usia belum cukup";
-  }
-}
 
 ?>
 
@@ -40,29 +26,40 @@ if(isset($_POST['submit'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style/array2.css">
 </head>
 <body>
-  <form action="" method="post">
-    <table>
-      <tr>
-        <td>Input umur</td>
-        <td><input type="number" name="umur" required></td>
-      </tr>
-      <tr>
-        <td>Pilih Film</td>
-        <td>
-          <select name="film" required>
-            <?php foreach($listFilm as $key => $film) : ?>
-            <option value="<?= $key ?>"><?= $film['judul'] ?></option>
-            <?php endforeach; ?>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button type="submit" name="submit">Submit</button></td>
-      </tr>
-    </table>
-  </form>
+  <div class="container">
+    <div class="card">
+      <h2>Muhamad Fadly Alviansyah</h2>
+      <form action="" method="post">
+        <label for="umur">Input umur</label>
+        <input type="number" name="umur" for="umur" required>
+        <label for="film">Pilih film</label>
+        <select name="film" required>
+          <?php foreach($listFilm as $key => $film) : ?>
+          <option value="<?= $key ?>"><?= $film['judul'] ?></option>
+          <?php endforeach; ?>
+        </select>
+        <button type="submit" name="submit">Submit</button>
+      </form>
+      <?php
+        if(isset($_POST['submit'])){
+          $age = $_POST['umur'];
+          $idFilm = $_POST['film'];
+        
+          $minAge = $listFilm[$idFilm]["min"];
+          $price = $listFilm[$idFilm]["harga"];
+        
+          if($age >= $minAge){
+            echo "Silahkan untuk membayar sebesar Rp." . number_format($price, 2, ',', '.');
+          }else{
+            echo "Usia belum cukup";
+          }
+        }
+      ?>
+    </div>
+  </div>
+  
 </body>
 </html>
