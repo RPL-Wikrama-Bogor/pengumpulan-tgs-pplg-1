@@ -17,19 +17,7 @@
         ]
     ];
 
-    if (isset($_POST['submit'])) {
-        $usia = $_POST['usia'];
-        $IDfilm = $_POST['judul'];
-
-        $minUsia = $listfilm[$IDfilm]['usia'];
-        $harga = $listfilm[$IDfilm]['harga'];
-
-        if ($usia > $minUsia) {
-            echo "<h3 style='color: blue'> Silahkan untuk membayar sebesar Rp. " . number_format($harga,2, ',', '.') . "</h3>";
-        } else {
-            echo "<h3 style='color: red'> Mohon maaf usia anda belum cukup</h3>";
-        }
-    }
+  
 ?>
 
 
@@ -38,7 +26,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>case film</title>
         <style>
             body{
                 display: flex;
@@ -49,7 +37,7 @@
         </style>
     </head>
     <body>
-        <h3 style='color: blue; text-align: center;'>Bioskop mini</h3>
+        <h3 style='color: #EFB495; text-align: center;'>Bioskop Hao8 !</h3>
         <form action="" method="post" >
             <table style='justify-content: center;' >
                 <tr>
@@ -72,5 +60,20 @@
                 </tr>
             </table>
         </form>
+        <?php
+        if (isset($_POST['submit'])) {
+        $usia = $_POST['usia'];
+        $IDfilm = $_POST['judul'];
+
+        $minUsia = $listfilm[$IDfilm]['usia'];
+        $harga = $listfilm[$IDfilm]['harga'];
+
+        if ($usia > $minUsia) {
+            echo "<h4 style='color: #053B50'> Silahkan untuk membayar sebesar Rp. " . number_format($harga,0, ' ', '.') . " selamat menonton ! </h4>";
+        } else {
+            echo "<h4 style='color: #AE445A'> Mohon maaf usia anda belum cukup</h4>";
+        }
+    }
+    ?>
     </body>
     </html>
