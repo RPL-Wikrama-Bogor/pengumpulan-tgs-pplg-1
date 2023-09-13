@@ -67,13 +67,13 @@
         <h1>Kalkulator Keuntungan Tiket Bioskop</h1>
         <form method="post" action="">
             <label for="tiketTerjualVip">Tiket Terjual VIP:</label>
-            <input type="number" id="tiketTerjualVip" name="tiketTerjualVip" max="50">
+            <input type="number" id="tiketTerjualVip" name="tiketTerjualVip" max="50" required>
 
             <label for="tiketTerjualEks">Tiket Terjual Eksekutif:</label>
-            <input type="number" id="tiketTerjualEks" name="tiketTerjualEks" max="50">
+            <input type="number" id="tiketTerjualEks" name="tiketTerjualEks" max="50" required>
 
             <label for="tiketTerjualEko">Tiket Terjual Ekonomi:</label>
-            <input type="number" id="tiketTerjualEko" name="tiketTerjualEko" max="50">
+            <input type="number" id="tiketTerjualEko" name="tiketTerjualEko" max="50" required>
 
             <input type="submit" value="Hitung Keuntungan">
         </form>

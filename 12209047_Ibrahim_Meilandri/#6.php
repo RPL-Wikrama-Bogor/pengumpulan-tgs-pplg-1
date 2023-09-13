@@ -1,5 +1,5 @@
 <?php
-    $jam;
+    $jam  ;
     $menit;
     $detik;
     $total;
