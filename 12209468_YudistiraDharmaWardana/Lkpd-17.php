@@ -4,44 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1>Lkpd Algoritma 17</h1>
-    <form action="" method="post">
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
-            Bilangan <?= $i ?>: <input type="number" name="number<?= $i ?>"><br>
-            <?php endfor; ?>
-            <input type="submit" name="submit" value="Hitung">
+<form method="post">
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $bilangan_terbesar = PHP_INT_MIN;
+            $bilangan_terkecil = PHP_INT_MAX;
+            $jumlah_bilangan = 0;
+            $total_bilangan = 0;
 
+            for ($i = 1; $i <= 20; $i++) {
+                $input_name = "bilangan$i";
+                $bilangan = (int)$_POST[$input_name];
+                $total_bilangan += $bilangan;
+                $jumlah_bilangan++;
 
+                if ($bilangan > $bilangan_terbesar) {
+                    $bilangan_terbesar = $bilangan;
+                }
 
-    </form>
-
-    <?php if(isset($_POST['submit'])) {
-
-        $numbers = [];
-        for($i = 1; $i <= 20; $i++) {
-            if(isset($_POST["numbers$i"])) {
-                $numbers = floatval($_POST["number$i"]);
-                array_push($numbers, $number);
+                if ($bilangan < $bilangan_terkecil) {
+                    $bilangan_terkecil = $bilangan;
+                }
             }
-        }
-        if(!empety($numbers)) {
-            $count = count($numbers);
-            $max = max($numbers);
-            $min = min($numbers);
-            $sum = array_sum($numbers);
-            $average = $sum / $count;
 
-            echo "Bilangan Terbesar: $max <br>";
-            echo "Bilangan Terkecil: $min <br>";
-            echo "Rata-Rata Bilangan: $average <br>";
-        }else {
-            echo "Tidak ada Bilangan Yang Dimasukan";
+            $rata_rata = $total_bilangan / $jumlah_bilangan;
+
+            echo "Bilangan terbesar: $bilangan_terbesar<br>";
+            echo "Bilangan terkecil: $bilangan_terkecil<br>";
+            echo "Rata-rata: $rata_rata<br>";
         }
-    }
-    
-    ?>
+        ?>
+
+        <p>Masukkan 20 bilangan:</p>
+        <?php
+        for ($i = 1; $i <= 20; $i++) {
+            echo "<input type='number' name='bilangan$i' required><br>";
+        }
+        ?>
+
+        <br>
+        <input type="submit" value="Hitung">
+    </form>
 </body>
 </html>
