@@ -14,7 +14,7 @@ $suhu_c;
 </head>
 <body>
 
-<h1>Lkpd Algoritma 8 </h1>
+<h1>Lkpd Algoritma 9 </h1>
 <form action="" method="post">
     <table>
         <tr>
