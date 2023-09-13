@@ -25,8 +25,8 @@
 
         <input type="submit" name="submit" value="Cek Kelayakan">
     </form>
-    </center>
-
+    
+</center>
     <?php
     if (isset($_POST["submit"]) && isset($_POST["film"]) && isset($_POST["umur"])) {
         $umur = intval($_POST["umur"]);
