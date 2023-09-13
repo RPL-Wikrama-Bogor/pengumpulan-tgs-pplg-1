@@ -55,6 +55,10 @@ $barang = [
         flex-direction: column;
     }
 
+    #allData {
+        display: none;
+    }
+
     #showList {
         display: none;
     }
@@ -65,7 +69,17 @@ $barang = [
 
     <div class="container">
 
+
+
+        <ol id="allData">
+            <p>List Barang: </p>
+            <?php foreach ($barang as $item) : ?>
+                <li><?= $item['nama'] ?> || Harga: Rp <?= number_format($item['harga'], 0, ',', '.') ?> </li>
+            <?php endforeach; ?>
+        </ol>
+
         <ol id="showList">
+            <p>Barang Diskon</p>
             <?php foreach ($barang as $item) : ?>
                 <?php if ($item['tipe'] === 'diskon') : ?>
                     <li><?= $item['nama'] ?> || Harga: Rp <?= number_format($item['harga'], 0, ',', '.') ?> </li>
@@ -75,6 +89,7 @@ $barang = [
 
         <ul>
             <li><button id="tampilkanBarang" onclick="showTable()">Tampilkan barang yang sedang diskon</button></li>
+            <li><button id="showAll" onclick="showAllData()">Tampilkan Keseluruhan Barang</button></li>
             <li>
                 <form action="" method="post">
                     Cari barang: <input type="text" name="nama" placeholder="Cari Barang..." required />
@@ -112,14 +127,7 @@ $barang = [
     </div>
 
 
-
-    <script>
-        const showList = document.getElementById('showList')
-
-        function showTable() {
-            showList.style.display = 'block';
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
