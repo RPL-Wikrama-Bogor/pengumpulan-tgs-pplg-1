@@ -14,7 +14,7 @@
             "harga" => 45000
         ],
         [
-            "judul" => "sleep call",
+            "judul" => "Enternarls",
             "min-usia" => 16,
             "harga" => 35000
         ],
@@ -24,7 +24,7 @@
             "harga" => 35000
         ],        
         [
-            "judul" => "avatar endang",
+            "judul" => "Avengers",
             "min-usia" => 11,
             "harga" => 0
         ],
