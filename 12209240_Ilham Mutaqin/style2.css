@@ -34,7 +34,7 @@ h1 {
 
 p {
     
-    text-align: justify;
+    text-align: jus;
     font-size: 18px;
 }
 
@@ -58,17 +58,36 @@ p {
 }
 
 .container-card {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Mengatur jarak antara container */
+    margin-top: 20px;
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        justify-content: left;
+        padding: 20px;
+        width: calc(50% - 10px); /* Setengah lebar container minus margin */
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
 }
+
+
+.card2 {
+    
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        justify-content: right;
+        padding: 20px;
+        width: calc(50% - 10px); /* Setengah lebar container minus margin */
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
 
 h2 {
     font-size: 1.5rem;
@@ -95,23 +114,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.container-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Membagi ruang menjadi dua kolom */
-    gap: 20px; /* Jarak antara kolom */
-    margin-top: 20px;
-}
-
-/* Gaya untuk setiap card di dalam container-card */
-.card {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-
 
 @media (max-width: 767px) {
     .container {
@@ -122,7 +124,11 @@ button {
     .content, .image {
         flex: 100%;
     }
-}
+    .container-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}   
 
 /* Responsif untuk screen pad */
 @media (min-width: 768px) and (max-width: 1023px) {

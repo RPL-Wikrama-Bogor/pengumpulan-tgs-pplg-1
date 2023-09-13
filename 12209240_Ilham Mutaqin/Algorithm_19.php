@@ -11,9 +11,9 @@
 <body>
 
     <form action="" method="post">
-        <p>VIP (MAX = 50)</p>
+        <p>VIP </p>
         <input type="number" name="vip">
-        <p>EKSEKUTIF (MAX = 50)</p>
+        <p>EKSEKUTIF </p>
         <input type="number" name="eksekutif">
         <p>EKONOMI (MAX = 50)</p>
         <input type="number" name="ekonomi">
