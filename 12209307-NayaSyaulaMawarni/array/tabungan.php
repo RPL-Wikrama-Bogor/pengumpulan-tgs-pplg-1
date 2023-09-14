@@ -1,10 +1,10 @@
 <?php
-    $tabungan = [10000, 50000, 10000, 5000, 20000, 5000, 50000, 20000];
+    $tabungan = [10000 , 50000, 10000, 5000, 20000, 5000, 50000, 20000];
 
     //menampilkan isi array
     echo "Uang yang terdapat di tabungan saya adalah " ;
     foreach ($tabungan as $jumlah => $isi) {
-        echo $isi . " ";
+        echo $isi . ", ";
     }
     echo "<br>";
 
