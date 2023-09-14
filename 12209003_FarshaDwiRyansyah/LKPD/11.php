@@ -16,7 +16,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soal 11</title>
 </head>
-<body>
+ <style>
+    body {
+            background-color: #96B6C5;
+        }
+
+        .card {
+            border: 0px;
+            width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 150px;
+            background-color: #ADC4CE;
+            shadow: 15px;
+        
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+
+        button {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10%;
+        }
+
+        h2 {
+            color: #102C57;
+        }
+
+        label {
+            font-size: 20px;
+        }
+ </style>
+<body><center>
+    <div class="card">
+        
     <h2>Kode Pegawai</h2>
 
     <form method="post" action="#">
@@ -30,7 +76,9 @@
                 <td><input type="submit" name="submit" value="kirim"></td>
             </tr>
         </table>
+    </div>
     </form>
+</center>
     
     <?php
         if (isset($_POST['submit'])) {
@@ -69,7 +117,9 @@
                 }elseif ($bulan == "12") {
                     $bulan = "Desember";
                 }else {
-                   $bulan = "(error)";
+                   $bulan = "(error
+                    <style>
+                    </style>)";
                 }
 
                 $tangal_lahir = $tanggal. $bulan. $tahun;
