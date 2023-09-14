@@ -36,9 +36,8 @@ body{
 }
 .container1 img{
     padding: 10px;
-    width: 50vw;
+	width: 50vw;
 	height: auto;
-    float: right;
 }
 
 .text h1{
@@ -84,6 +83,10 @@ body{
   }
   
 @media (max-width: 768px) {
+	.container1{
+		display: flex;
+		flex-direction: column-reverse;
+	}
 	.hero-section {
 	  flex-direction: column;
 	}
