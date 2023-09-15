@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Gaya umum */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 10px 10px 10px 10px;
+        }
+
+        /* Navigasi */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        .nav-admin {
+            margin-left: auto;
+        }
+
+        .button {
+            height: 10px;
+            display: inline-block;
+            padding: 8px 25px;
+            padding-bottom: 15px;
+            background-color: #fac552;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #dfab41;
+        }
+
+        /* Kontainer teks dan gambar */
+        .container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        img {
+            width: 850px;
+            max-width: 100%;
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+        .teks {
+            float: left;
+            padding-left: 30px;
+        }
+
+        .teks h3 {
+            font-size: 20px;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        .teks p {
+            font-size: 14px;
+            margin: 5px 0;
+            text-align: left;
+        }
+
+        /* box-box info */
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column {
+            flex: 1;
+            width: calc(50% - 10px);
+            height: 100px;
+            background-color: #fac552;
+            margin: 5px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .column h3 {
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .column p {
+            font-size: 16px;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Formulir pengaduan */
+
+        .container-1 h3 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #e9e9e9;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            padding-right: 30px;
+            overflow: hidden;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 18px;
+            background-color: #e9ba55;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            order: 2;
+            float: right;
+        }
+
+        /* Laporan pengaduan */
+        .laporan-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .laporan-container h3 {
+            text-align: center;
+        }
+
+        .laporan {
+            margin-top: 20px;
+            border: 2px solid #000;
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .column-kiri {
+            flex: 1;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .column-kanan {
+            flex: 1;
+            padding: 15px;
+        }
+
+        .informasi {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        /* Responsif untuk layar kecil (di bawah 576px) */
+        @media (max-width: 576px) {
+            .column {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Responsif untuk layar sedang (di atas 576px) */
+        @media (min-width: 576px) {
+            .column {
+                width: calc(50% - 10px);
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* Responsif untuk layar besar (di atas 992px) */
+        @media (min-width: 992px) {
+            .column {
+                width: calc(33.33% - 10px);
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-admin">
+            <a class="button" href="login.html">Administrator</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="teks">
+            <img src="image.jpg" alt="">
+            <h3>Pengaduan Masyarakat</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio odit iusto eligendi ratione
+                    laboriosam omnis sit sed perferendis earum. Adipisci minima quis aliquid voluptates id. Eius
+                    recusandae numquam cum blanditiis!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, ab aliquam obcaecati dicta
+                    voluptate nostrum rerum cumque placeat molestias labore iure ad quidem laboriosam nihil ipsa! Veniam
+                    natus magni ullam?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, debitis. Laudantium commodi
+                    sint quisquam ab fugit expedita! Porro, eum! Consequuntur, eius numquam? Repellendus dicta eveniet
+                    amet odit doloribus fugit illo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="box">
+        <div class="column">
+            <h3>Jumlah Kecamatan</h3>
+            <p>15</p>
+        </div>
+        <div class="column">
+            <h3>Jumlah Desa</h3>
+            <p>42</p>
+        </div>
+        <div class="column">
+            <h3>Jumlah Penduduk</h3>
+            <p>12.000</p>
+        </div>
+        <div class="column">
+            <h3>Data per Tahun</h3>
+            <p>2023</p>
+        </div>
+    </section>
+
+    <div class="container-1">
+        <h3>Buat Pengaduan</h3>
+        <form method="post">
+            <label for="nik">NIK:</label><br>
+            <input type="text" id="nik" name="nik" required><br><br>
+
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+
+            <label for="no_telp">Nomor Telepon:</label><br>
+            <input type="tel" id="no_telp" name="no_telp" required><br><br>
+
+            <label for="pengakuan">Pengakuan:</label><br>
+            <textarea id="pengakuan" name="pengakuan" rows="5" cols="40" required></textarea><br><br>
+
+            <label for="gambar">Upload Gambar Terkait:</label><br>
+            <input type="file" id="gambar" name="gambar" accept="image/*"><br><br>
+
+            <div class="button-container">
+                <input type="submit" value="Kirim Pengaduan">
+            </div>
+        </form>
+
+        <div class="laporan-container">
+            <h3>Laporan Pengaduan</h3>
+            <div class="laporan">
+                <div class="column-kiri">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et
+                        dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                        aliquid ex ea commodi consequatur.</p>
+                </div>
+                <div class="column-kanan">
+                    <div class="informasi">
+                        <p>3 September 2023: Raga Ridzki Panuntun</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laporan">
+                <div class="column-kiri">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et
+                        dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                        aliquid ex ea commodi consequatur.</p>
+                </div>
+                <div class="column-kanan">
+                    <div class="informasi">
+                        <p>4 September 2023: Panuntun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
