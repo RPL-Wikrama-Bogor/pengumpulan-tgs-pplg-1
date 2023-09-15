@@ -9,7 +9,47 @@
 </head>
 
 <body>
-
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh;
+}
+h2 {
+    color: #333;
+}
+form {
+    margin-bottom: 20px;
+    width: fit-content;
+}
+input[type="text"] {
+    padding: 5px;
+}
+input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+.result {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #e0e0e0; 
+    width: 400px;
+    text-align: center;
+}
+.error {
+    color: red;
+}
+    </style>
     <form action="" method="post">
         <p>VIP (MAX = 50)</p>
         <input type="number" name="vip">
