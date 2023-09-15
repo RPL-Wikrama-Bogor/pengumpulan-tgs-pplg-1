@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ... (kode CSS sebelumnya) ... */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container .submit {
+    padding: 8px 18px;
+    background-color: #e9ba55;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14.8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    order: 2; /* Mengubah urutan tampilan tombol "Masuk" ke kanan */
+}
+
+.button-container .cancel-button {
+    padding: 8px 18px;
+    background-color: #3e341e;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14.8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-left: 570px;
+    width: 35px;
+    order: 1;/* Mengubah urutan tampilan tombol "Batal" ke kiri */
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="ngadu.html" method="POST">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="button-container">
+              <a class="submit" href="admin.html">Masuk</a>
+                <a href="index.html" class="cancel-button">Batal</a>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
