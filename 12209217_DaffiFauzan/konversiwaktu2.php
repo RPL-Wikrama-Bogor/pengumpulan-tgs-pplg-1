@@ -34,7 +34,7 @@
     if (isset($_POST['submit'])) {
         $waktu = $_POST['waktu'];
         
-        if ($waktu > 3600 && $waktu > 60) {
+        if ($waktu >= 3600 && $waktu >= 60) {
             $count = $waktu % 3600;
             $jam = ($waktu - $count) / 3600;
             $count2 = $count % 60;

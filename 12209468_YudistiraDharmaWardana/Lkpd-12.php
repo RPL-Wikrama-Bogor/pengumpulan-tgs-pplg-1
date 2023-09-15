@@ -4,7 +4,7 @@ $hh_jm;
 $mm_mnt;
 $ss_dtk;
 
-?>
+?>  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,43 +12,24 @@ $ss_dtk;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="L_11.css">
 </head>
-
-<style>
-
-.box{
-    background-color: green;
-    text-align: center;
-}
-#content{
-    text-align: center;
-}
-
-
-</style>
-
 
 <body>
     
     
-    
-<div class="box" name = "box" id="box">
-    <h1>Lkpd Algoritma 3 </h1>
-    <div class="box-content">
-        <form action="" method="post">
-            <div class="box">
-                <input type="text" placeholder="Input Jam " style="text-align: center;" name="jm"> 
-            </div>
-            <div class="box">
-                <input type="text" placeholder="Input Menit " style="text-align: center;" name="mnt">
-            </div>
-            <div class="box">
-                <input type="text" placeholder="Input Detik" style="text-align: center;" name="dtk">
-            </div>
-            <button name="submit" method="post" style="background-color: red;   ">Kirim</button>
-        </form>
-    </div>
-</div>
+<div class="card">
+  <h1 style="text-align: center;">Lkpd Algoritma 11</h1>
+  <form method="post">
+
+    <input type="text" placeholder="Input Jam " style="text-align: center;" name="jm">
+    <input type="text" placeholder="Input Menit " style="text-align: center;" name="mnt">
+    <input type="text" placeholder="Input Detik" style="text-align: center;" name="dtk">
+        
+    <button name="submit" method="post" style="background-color: red;   ">Kirim</button>
+
+  </form>
+</div>    
 
 </body>
 </html>
