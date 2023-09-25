@@ -1,4 +1,3 @@
-<<<<<<< HEAD:12209472-RatuZahra/6.php
 <?php
 
     $jam = 0;
@@ -9,14 +8,11 @@
     $sisa2 = 0;
 ?>
 
-=======
->>>>>>> 6c3ebe7cfdd59ac7f31c63444159ebefe282bd6b:12209003_FarshaDwiRyansyah/LKPD/6.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD:12209472-RatuZahra/6.php
     <title>Soal 6</title>
 </head>
 <body>
@@ -73,45 +69,5 @@
     }
     ?>
     
-=======
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<form action="" method="post">
-    <p>Detik</p>
-    <input type="number" name="total">
-    <button type="submit" name="submit"> Submit</button>
-    <br>
-
-    <?php 
-
-    $jam;
-    $menit;
-    $detik;
-    $total;
-    
-    if(isset($_POST['submit'])){
-        $total = $_POST['total'];
-
-        $jam = $total / 3600;
-
-        $total %= 3600;
-
-        $menit = $total / 60;
-
-        $detik = $total % 60;
-
-        echo("Jam = " . floor($jam));
-        echo("<br/>");
-        echo("Menit = " . floor($menit));
-        echo("<br/>");
-        echo("Detik = " . $detik);
-    }
-    
-    ?>
-</form>
->>>>>>> 6c3ebe7cfdd59ac7f31c63444159ebefe282bd6b:12209003_FarshaDwiRyansyah/LKPD/6.php
 </body>
 </html>

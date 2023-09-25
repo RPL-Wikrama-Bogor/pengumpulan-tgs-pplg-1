@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD:12209472-RatuZahra/18.php
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,55 +65,6 @@
 </head>
 <body>
     <form method="post" action="">
-=======
-</head>
-<style>
-    body {
-            background-color: #96B6C5;
-        }
-
-        .card {
-            border: 0px;
-            width: 500px;
-            padding: 40px;
-            border-radius: 15px;
-            margin: 150px;
-            background-color: #ADC4CE;
-            shadow: 15px;
-        
-        }
-        
-        input {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-radius: 15px;
-        }
-
-
-        button {
-            background-color: grey;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 10%;
-        }
-
-        h2 {
-            color: #102C57;
-        }
-
-        label {
-            font-size: 20px;
-        }
- </style>
-<body>
-    <form method="post" action="18_action.php">
->>>>>>> 6c3ebe7cfdd59ac7f31c63444159ebefe282bd6b:12209003_FarshaDwiRyansyah/LKPD/18.php
         <?php
         for ($i = 1; $i <= 15; $i++) {
             echo "<h3>Data Siswa ke-$i</h3>";
@@ -130,7 +80,6 @@
     </form>
 </body>
 </html>
-<<<<<<< HEAD:12209472-RatuZahra/18.php
 
         <?php
           if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -216,5 +165,3 @@
 </body>
 
 </html>
-=======
->>>>>>> 6c3ebe7cfdd59ac7f31c63444159ebefe282bd6b:12209003_FarshaDwiRyansyah/LKPD/18.php
