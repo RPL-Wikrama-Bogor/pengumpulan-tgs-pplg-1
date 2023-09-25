@@ -15,7 +15,7 @@
                 <td>
                     <select name="bahanBakar">
                         <option hidden>-----------Pilih-----------</option>
-                        <option value="Shell Super">Pertamax-turbo</option>
+                        <option value="Shell Super">Super Shell</option>
                         <option value="Shell V-Power">Shell V-Power</option>
                         <option value="Shell V-Power Diesel">Shell V-Power Diesel</option>
                         <option value="Shell V-Power Nitro">Shell V-Power Nitro</option>
@@ -31,7 +31,7 @@
 
 class Shell{
     
-    public  $Pertamax_turbo = 15000,
+    public  $Shell_super = 15420,
             $Shell_V_Power = 16130,
             $Shell_V_Power_Diesel = 18310,
             $Shell_V_Power_Nitro = 16510;
@@ -40,9 +40,9 @@ class Shell{
 
 }
 class Beli extends Shell{
-    public function hitung($hrga, $jumlah)
+    public function hitung($harga, $jumlah)
     {
-        $hAkhir = $hrga * $jumlah + ($hrga * $jumlah * $this->PPN);
+        $hAkhir = $harga * $jumlah + ($harga * $jumlah * $this->PPN);
         echo "Anda Membeli Bahan Bakar Minyak : ". $_POST['bahanBakar'] . "<br>";
         echo "Dengan Jumlah : $jumlah Liter<br>";
         echo "Total Yang Harus Anda bayar : Rp." . number_format($hAkhir, 0, ',', '.'). ",-";
@@ -55,20 +55,20 @@ if(isset($_POST['button'])){
 
     switch($bahanBakar){
         case "Shell Super" : 
-            $hrga = $shell->Pertamax_turbo;
+            $harga = $shell->Shell_super;
             break;
         case "Shell V-Power" : 
-            $hrga = $shell->Shell_V_Power;
+            $harga = $shell->Shell_V_Power;
             break;
         case "Shell V-Power Diesel" : 
-            $hrga = $shell->Shell_V_Power_Diesel;
+            $harga = $shell->Shell_V_Power_Diesel;
             break;
         case "Shell V-Power Nitro" : 
-            $hrga = $shell->Shell_V_Power_Nitro;
+            $harga = $shell->Shell_V_Power_Nitro;
             break;
         default : 
-            $hrga = 0;
+            $harga = 0;
             break;
     }
-    echo $shell->hitung($hrga, $jumlah);
+    echo $shell->hitung($harga, $jumlah);
 }
