@@ -1,5 +1,5 @@
 <?php
-    $no_pegawai;
+    $no__pegawai;
     $length;
     $no_golongan;
     $tanggal;
@@ -18,27 +18,24 @@
 </head>
 <body>
     <div class="container">
-    <h2>Kode Pegawai</h2>
-
+    <b>Kode Pegawai</b>
     <form method="post" action="#">
-                <input type="number" name="no_pegawai" class="nmbr">
+                <input type="number" name="no__pegawai" class="nmbr">
 <br>    
             <input type="submit" name="submit" value="kirim" class="clk">
     </form>
     </div>
-
-    
     <?php
         if (isset($_POST['submit'])) {
-            $no_pegawai = $_POST ['no_pegawai'];
-            $length = strlen($no_pegawai);
+            $no__pegawai = $_POST ['no__pegawai'];
+            $length = strlen($no__pegawai);
 
             if ($length == 11) {
-                $no_golongan = substr($no_pegawai, 0, 1);
-                $tanggal = substr($no_pegawai, 1, 2);
-                $bulan = substr($no_pegawai, 3, 2);
-                $tahun = substr($no_pegawai, 5, 4);
-                $no_urutan = substr($no_pegawai, 9, 2);
+                $no_golongan = substr($no__pegawai, 0, 1);
+                $tanggal = substr($no__pegawai, 1, 2);
+                $bulan = substr($no__pegawai, 3, 2);
+                $tahun = substr($no__pegawai, 5, 4);
+                $no_urutan = substr($no__pegawai, 9, 2);
 
                 if ($bulan == "01") {
                     $bulan = "Januari";
