@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
+    $no_pegawai;
+=======
     $no__pegawai;
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
     $length;
     $no_golongan;
     $tanggal;
@@ -17,6 +21,34 @@
     <title>Soal 11</title>
 </head>
 <body>
+<<<<<<< HEAD
+    <h2>Kode Pegawai</h2>
+
+    <form method="post" action="#">
+        <table>
+            <tr>
+                <td>Kode Pegawai</td>
+                <td>  :  </td>
+                <td><input type="number" name="no_pegawai"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="kirim"></td>
+            </tr>
+        </table>
+    </form>
+    
+    <?php
+        if (isset($_POST['submit'])) {
+            $no_pegawai = $_POST ['no_pegawai'];
+            $length = strlen($no_pegawai);
+
+            if ($length == 11) {
+                $no_golongan = substr($no_pegawai, 0, 1);
+                $tanggal = substr($no_pegawai, 1, 2);
+                $bulan = substr($no_pegawai, 3, 2);
+                $tahun = substr($no_pegawai, 5, 4);
+                $no_urutan = substr($no_pegawai, 9, 2);
+=======
     <div class="container">
     <b>Kode Pegawai</b>
     <form method="post" action="#">
@@ -36,6 +68,7 @@
                 $bulan = substr($no__pegawai, 3, 2);
                 $tahun = substr($no__pegawai, 5, 4);
                 $no_urutan = substr($no__pegawai, 9, 2);
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 
                 if ($bulan == "01") {
                     $bulan = "Januari";
@@ -67,6 +100,17 @@
 
                 $tangal_lahir = $tanggal. $bulan. $tahun;
                 
+<<<<<<< HEAD
+                echo "Golongan  = $no_golongan";
+                echo "<br>";
+                echo "Tanggal Lahir = $tangal_lahir";
+                echo "<br>";
+                echo "Nomor Urut  = $no_urutan";
+                echo "<br>";
+            }
+            else {
+                echo "Kode Pegawai Tidak Sesuai";
+=======
                 echo"<script>alert('Golongan  = $no_golongan');</script>";
                 echo "<br>";
                 echo"<script>alert('Tanggal Lahir  = $tangal_lahir');</script>";
@@ -78,12 +122,16 @@
             else {
                 echo"<script>alert('tidak sesuai');
                 </script>";
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
             }
 
 
         }
     ?>
 </body>
+<<<<<<< HEAD
+</html>
+=======
 </html>
 
 <style>
@@ -119,3 +167,4 @@ input{
     background-color:#B0D9B1;
 }
 </style>
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6

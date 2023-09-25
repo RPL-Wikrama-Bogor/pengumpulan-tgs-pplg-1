@@ -25,6 +25,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>Penambahan 1 Detik pada Waktu</title>
+<<<<<<< HEAD
+</head>
+
+<body>
+    <h2>Penambahan 1 Detik pada Waktu</h2>
+    <form method="post" action="">
+        <label>Masukkan waktu (hh:mm:ss):</label>
+        <input type="text" name="waktu" required>
+        <button type="submit">Tambah 1 Detik</button>
+    </form>
+
+    <?php if (isset($hasil)) : ?>
+        <p>Data Waktu: <?php echo $waktu; ?></p>
+        <p>Setelah Penambahan 1 detik: <?php echo $hasil; ?></p>
+    <?php endif; ?>
+</body>
+
+</html>
+
+=======
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -97,3 +117,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
