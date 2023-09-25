@@ -28,7 +28,7 @@ echo "Pecahan uang terbesar adalah <b>$max</b> </br> ";
 echo "Jika diurutkan dari yang terkecil maka uang yang berada di tabungan adalah <b>$terkecil</b> </br> ";
 echo "Jika diurutkan dari yang terbesar maka uang yang berada di tabungan adalah <b>$terbesar</b> </br> ";
 echo "Gabungkan pecahan 50000 dua menjadi pecahan 100000: <strong>$splice</strong> ","<br>";
-echo "Tambah uang 20000 kedalam tabungan: <strong>$add</strong> ","<br>";n 
+echo "Tambah uang 20000 kedalam tabungan: <strong>$add</strong> ","<br>";
 echo "<br>Jika diurutkan dari yang terkecil kini tabungan saya adalah $hasilAkhir";
 echo "<br>Jumlah tabungan saya adalah $totalAkhir";
 
