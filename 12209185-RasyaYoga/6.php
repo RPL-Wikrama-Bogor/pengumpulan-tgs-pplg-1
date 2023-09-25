@@ -1,12 +1,3 @@
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    scroll-behavior: smooth;
-  }
-</style>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +8,9 @@
 </head>
 
 <body>
-  <h1>From Total Second to Hour, Minute, Second</h1>
   <form action="" method="post">
     <table>
       <tr>
-        <td>Total Second : </td>
         <td><input type="number" name="total"></td>
       </tr>
       <tr>
@@ -42,7 +31,7 @@ if (isset($_POST['submit'])) {
   $leftover2 = $leftover % 60;
   $m = ($leftover-$leftover2) / 60;
   $s = $leftover2;
-  echo $h." jam".$m." menit".$s." detik";
+  echo $h."jam".$m."menit".$s. "detik";
 }
 ?></p>
 </body>

@@ -12,17 +12,12 @@
     <title>Algoritma 8</title>
 </head>
     <body>
-    <h1>Algoritma 8</h1>
     <form action="" method="post">
         <table>
             <tr>
-                <td>Input Bilangan</td>
-                <td>:</td>
                 <td><input type="number" name="bil"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
                 <td><input type="submit" value="Cari" name="submit"></td>
             </tr>
         </table>

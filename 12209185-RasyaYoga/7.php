@@ -1,12 +1,4 @@
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    scroll-behavior: smooth;
-  }
-</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +9,6 @@
 </head>
 
 <body>
-  <h1>Orange</h1>
   <form action="" method="post">
     <table>
       <tr>
