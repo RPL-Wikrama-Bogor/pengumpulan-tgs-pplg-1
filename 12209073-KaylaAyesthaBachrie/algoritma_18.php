@@ -1,61 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Penghasilan Penjualan Tiket Bioskop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juara Kelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FAACA8;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form h3{
+            text-align: center;
+        }
+
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .result {
+            width: 80%;
+            margin: 20px auto;
+        }
+        
+        .result i {
+            text-align: center;
+        }
+
+        .result h3 {
+            text-align: center;
+        }
+
+        .hasil {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 37%;
+            margin: 0 auto;
+            color: red;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .form {
+                width: 100%;
+            }
+
+            form {
+                padding: 10px;
+            }
+        }
+        </style>
 </head>
 <body>
-    <h2>Penghasilan Penjualan Tiket Bioskop</h2>
-    <form action="" method="post">
-        <h3>Kelas VIP</h3>
-        Jumlah Tiket Terjual: <input type="number" name="tiket_vip" required><br>
+    <h2>PENCARIAN JUARA KELAS</h2>
+    <?php
+        echo "<div class='hasil'>";
+        if (empty($juaraKelas)) {
+            echo "<center><i>Tidak ada juara kelas yang memenuhi kriteria</i></center>";
+        } else {
+            arsort($juaraKelas);
+            $juara = key($juaraKelas);
+        
+            echo "<center><h3>Juara Kelas</h3></center>";
+            echo "<center>Nama: " . $_POST['nama'][$juara] . "<br></center>";
+            echo "<center>Nilai Rata-rata: " . $juaraKelas[$juara] . "<br></center>";
+        }
+        echo "</div>";
+        echo "<br>";
+    ?>
+    <div class="container">
+        <form action="" method="post">
+            <?php
+            $mataPelajaran = array("MTK", "INDO", "INGG", "DPK", "Agama");
+            $siswaCount = 15;
+            
+            for ($i = 1; $i <= $siswaCount; $i++) {
+                echo "<div class='form'>";
+                echo "<h3>Siswa ke-$i</h3>";
+                echo "<center>Nama : <input type='text' name='nama[]' required><br></center>";
+                
+                foreach ($mataPelajaran as $mapel) {
+                    echo "<center> $mapel: <input type='number' name='nilai[$i][$mapel]' required><br></center>";
+                }
+    
+                echo "<center>Kehadiran(%) : <input type='number' name='kehadiran[$i]' required><br></center>";
+                echo "<br>";
+                echo "</div>";
+                echo "<br>";
+                echo "<br>";
 
-        <h3>Kelas Eksekutif</h3>
-        Jumlah Tiket Terjual: <input type="number" name="tiket_eksekutif" required><br>
+            }
+            ?>
 
-        <h3>Kelas Ekonomi</h3>
-        Jumlah Tiket Terjual: <input type="number" name="tiket_ekonomi" required><br>
+            <input type="submit" name="submit" value="Cari Juara">
+        </form>
+    </div>
 
-        <br>
-        <input type="submit" name="submit" value="Hitung Penghasilan">
-    </form>
-
+    <div class="result">
     <?php
     if (isset($_POST['submit'])) {
-        $tiket_vip = $_POST['tiket_vip'];
-        $tiket_eksekutif = $_POST['tiket_eksekutif'];
-        $tiket_ekonomi = $_POST['tiket_ekonomi'];
+        $nilai = $_POST['nilai'];
+        $kehadiran = $_POST['kehadiran'];
 
-        $keuntungan_vip = 0;
-        $keuntungan_eksekutif = 0;
-        $keuntungan_ekonomi = 0;
-        $total_keuntungan = 0;
-
-        if ($tiket_vip >= 35) {
-            $keuntungan_vip = 0.25;
-        } elseif ($tiket_vip >= 20) {
-            $keuntungan_vip = 0.15;
-        } else {
-            $keuntungan_vip = 0.05;
+        $totalSiswa = count($nilai);
+        $juaraKelas = array();
+        
+        foreach ($nilai as $siswa => $mapelNilai) {
+            $nilaiTotal = array_sum($mapelNilai);
+            $nilaiRataRata = $nilaiTotal / count($mapelNilai);
+            
+            if ($nilaiTotal >= 475 && $kehadiran[$siswa] == 100) {
+                $juaraKelas[$siswa] = $nilaiRataRata;
+            }
         }
 
-        if ($tiket_eksekutif >= 40) {
-            $keuntungan_eksekutif = 0.20;
-        } elseif ($tiket_eksekutif >= 20) {
-            $keuntungan_eksekutif = 0.10;
-        } else {
-            $keuntungan_eksekutif = 0.02;
-        }
-
-        $keuntungan_ekonomi = 0.07;
-
-        $total_keuntungan = ($tiket_vip * 50 * $keuntungan_vip) + ($tiket_eksekutif * 50 * $keuntungan_eksekutif) + ($tiket_ekonomi * 50 * $keuntungan_ekonomi);
-
-        echo "<h3>Hasil Penghitungan</h3>";
-        echo "Keuntungan Kelas VIP: $" . number_format($tiket_vip * 50 * $keuntungan_vip, 2) . "<br>";
-        echo "Keuntungan Kelas Eksekutif: $" . number_format($tiket_eksekutif * 50 * $keuntungan_eksekutif, 2) . "<br>";
-        echo "Keuntungan Kelas Ekonomi: $" . number_format($tiket_ekonomi * 50 * $keuntungan_ekonomi, 2) . "<br>";
-        echo "Total Keuntungan: $" . number_format($total_keuntungan, 2);
     }
     ?>
+    </div>
 </body>
 </html>
+``
