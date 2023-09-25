@@ -1,5 +1,5 @@
 <?php
-    $no_pegawai;
+    $no__pegawai;
     $length;
     $no_golongan;
     $tanggal;
@@ -17,32 +17,25 @@
     <title>Soal 11</title>
 </head>
 <body>
-    <h2>Kode Pegawai</h2>
-
+    <div class="container">
+    <b>Kode Pegawai</b>
     <form method="post" action="#">
-        <table>
-            <tr>
-                <td>Kode Pegawai</td>
-                <td>  :  </td>
-                <td><input type="number" name="no_pegawai"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="submit" value="kirim"></td>
-            </tr>
-        </table>
+                <input type="number" name="no__pegawai" class="nmbr">
+<br>    
+            <input type="submit" name="submit" value="kirim" class="clk">
     </form>
-    
+    </div>
     <?php
         if (isset($_POST['submit'])) {
-            $no_pegawai = $_POST ['no_pegawai'];
-            $length = strlen($no_pegawai);
+            $no__pegawai = $_POST ['no__pegawai'];
+            $length = strlen($no__pegawai);
 
             if ($length == 11) {
-                $no_golongan = substr($no_pegawai, 0, 1);
-                $tanggal = substr($no_pegawai, 1, 2);
-                $bulan = substr($no_pegawai, 3, 2);
-                $tahun = substr($no_pegawai, 5, 4);
-                $no_urutan = substr($no_pegawai, 9, 2);
+                $no_golongan = substr($no__pegawai, 0, 1);
+                $tanggal = substr($no__pegawai, 1, 2);
+                $bulan = substr($no__pegawai, 3, 2);
+                $tahun = substr($no__pegawai, 5, 4);
+                $no_urutan = substr($no__pegawai, 9, 2);
 
                 if ($bulan == "01") {
                     $bulan = "Januari";
@@ -74,15 +67,17 @@
 
                 $tangal_lahir = $tanggal. $bulan. $tahun;
                 
-                echo "Golongan  = $no_golongan";
+                echo"<script>alert('Golongan  = $no_golongan');</script>";
                 echo "<br>";
-                echo "Tanggal Lahir = $tangal_lahir";
+                echo"<script>alert('Tanggal Lahir  = $tangal_lahir');</script>";
                 echo "<br>";
-                echo "Nomor Urut  = $no_urutan";
+                echo"<script>alert('NOmor Urut = $no_urutan');</script>";
                 echo "<br>";
+
             }
             else {
-                echo "Kode Pegawai Tidak Sesuai";
+                echo"<script>alert('tidak sesuai');
+                </script>";
             }
 
 
@@ -90,3 +85,37 @@
     ?>
 </body>
 </html>
+
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:600px;
+background-color:#618264;
+color:#D0E7D2;
+}
+.container{
+    background-color:#79AC78;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.nmbr{
+    margin:10px;
+    border-radius:5px;
+    width:250px;
+    height:40px;
+    font-size:30px
+}
+.clk{
+    width:150px;
+    height:30px;
+    border-radius:10px;
+    font-size:20px;
+    color:#D0E7D2;
+}
+input{
+    background-color:#B0D9B1;
+}
+</style>

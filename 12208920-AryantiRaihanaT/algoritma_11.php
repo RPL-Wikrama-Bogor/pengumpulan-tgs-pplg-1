@@ -73,8 +73,10 @@ $tanggal_lahir;
                 $bulan = "Oktober";
             }else if($bulan == "11"){
                 $bulan = "November";
-            }else{
+            }else if($bulan == "12"){
                 $bulan = "Desember";
+            }else{
+                $bulan = "error";
             }
 
             $tanggal_lahir = $tanggal . " " . $bulan .  " " . $tahun;

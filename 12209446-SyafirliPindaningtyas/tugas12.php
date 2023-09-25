@@ -15,17 +15,28 @@ $ss;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah 1 detik</title>
     <style>
-         body{
-            background-color:gainsboro;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .card{
+        body {
+            background: radial-gradient(#D2DAFF, #EEF1FF, #AAC4FF);
+            margin: 0;
+            padding: 20px;
+        }
+        
+
+
+        .card {
             border: 0px;
-            width: 550px;
+            max-width: 700px;
             padding: 40px;
             border-radius: 15px;
             margin: 150px;
-            background-color: #AAC4FF;
+            background-color: #D2DAFF;
+            box-shadow: 20px;
         }
 
         button[type="submit"] {
@@ -36,52 +47,64 @@ $ss;
             text-decoration: none;
             margin: 4px 2px;
             cursor: pointer;
-            
+            border-radius: 10%;
+
         }
+
         input {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
+            box-shadow: 20px;
         }
 
+        label {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                margin-left: 40px;
+                margin-right: 30px;
+                padding: 10px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
     <center>
-    <div class="card">
-    <h1>Masukan data</h1>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>Jam</td>
-                <td>:</td>
-                <td><input type="number" name="jm" id="jm"></td>
-            </tr>
-            <tr>
-                <td>Menit</td>
-                <td>:</td>
-                <td><input type="number" name="mm" id="mm"></td>
-            </tr>
-            <tr>
-                <td>Detik</td>
-                <td>:</td>
-                <td><input type="number" name="dt" id="dt"></td>
-            </tr>
-            <tr>
+        <div class="card">
+            <h1>Masukan data</h1>
+            <hr>
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td><label for="">Jam</label></td>
+                        <td> <input type="number" name="jm" id="jm"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Menit</label></td>
+                        <td><input type="number" name="mm" id="mm"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Detik</label></td>
+                        <td><input type="number" name="ss" id="ss"></td>
+                    </tr>
+                    <tr>
 
-                <button type="submit" name="submit" value="hitung">Hitung</button>
-            </tr>
-        </table>
-</form>
+                        <td><button type="submit" name="submit" value="hitung">Hitung</button></td>
+                    </tr>
+                </table>
+            </form>
 
             <?php
             if (isset($_POST['submit'])) {
                 $hh = $_POST['jm'];
-                $mm = $_POST['mn'];
-                $ss = $_POST['dt'];
+                $mm = $_POST['mm'];
+                $ss = $_POST['ss'];
 
 
                 $ss = $ss + 1;
@@ -102,7 +125,8 @@ $ss;
                 echo "$hh jam $mm menit $ss detik </h3> ";
             }
             ?>
-            </div>
+        </div>
     </center>
 </body>
+
 </html>

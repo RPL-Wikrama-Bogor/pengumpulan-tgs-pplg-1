@@ -12,25 +12,14 @@
     <title>Algoritma 8</title>
 </head>
     <body>
-    <h1>Algoritma 8</h1>
     <form action="" method="post">
-        <table>
-            <tr>
-                <td>Input Bilangan</td>
-                <td>:</td>
-                <td><input type="number" name="bil"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td><input type="submit" value="Cari" name="submit"></td>
-            </tr>
-        </table>
-    </form>
+    <input type="number" name="bill">
+                <input type="submit" value="Cari" name="submit">
+                </form>
 </body>
 <?php
  if(isset($_POST['submit'])) {
-    $bilangan = $_POST['bil'];
+    $bilangan = $_POST['bill'];
 
     $satuan = $bilangan % 10;
     $puluhan = ($bilangan / 10) % 10;
