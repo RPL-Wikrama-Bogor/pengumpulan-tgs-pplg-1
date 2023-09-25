@@ -1,34 +1,34 @@
 <?php
 $furniture = [
     [
-        "nama" => "Papan",
+        "nama" => "Meja",
         "harga"  => 1000000,
         "tipe" => "rakitan"
     ],
     [
-        "nama" => "Pintu",
+        "nama" => "Lemari",
         "harga"  => 1500000,
         "tipe" => "rakitan"
     ],
     [
-        "nama" => "Banku",
+        "nama" => "Kursi",
         "harga"  => 2000000,
         "tipe" => "rakitan"
     ],
     [
-        "nama" => "Cermin",
+        "nama" => "Mesin Cuci",
         "harga"  => 2000000,
         "tipe" => "non-rakitan"
     ],
     [
-        "nama" => "Kompor",
-        "harga"  => 100000,
+        "nama" => "TV",
+        "harga"  => 4000000,
         "tipe" => "non-rakitan"
     ],
     [
-        "nama" => "Televisi",
+        "nama" => "Laptop",
         "harga"  => 10000000,
-        "tipe" => "rakitan"
+        "tipe" => "non-rakitan"
     ]
 ];
 
@@ -40,14 +40,12 @@ if (isset($_POST['beli'])) {
     $barangNonRakitan = $_POST['barang_nonrakitan'];
     $jumlahNonRakitan = (int)$_POST['jumlah_nonrakitan'];
 
-    // Calculate the total price for selected rakitan items
     foreach ($furniture as $item) {
         if ($item['nama'] === $barangRakitan) {
             $totalPrice += $item['harga'] * $jumlahRakitan;
         }
     }
 
-    // Calculate the total price for selected non-rakitan items
     foreach ($furniture as $item) {
         if ($item['nama'] === $barangNonRakitan) {
             $totalPrice += $item['harga'] * $jumlahNonRakitan;
@@ -80,9 +78,8 @@ if (isset($_POST['beli'])) {
 <body>
     <h1>Daftar Furniture</h1>
     <hr>
-    
-<center>
-<?php
+    <center>
+        <?php
         foreach ($furniture as $furni):
         ?>
         <div class="card">
@@ -93,7 +90,6 @@ if (isset($_POST['beli'])) {
         <?php
         endforeach;
         ?>
-</center>
     <hr>
     <form action="" method="post">
         <label for=""><b>Barang Rakitan : </b></label>
@@ -128,7 +124,6 @@ if (isset($_POST['beli'])) {
         <br>
         <input type="submit" name="beli" value="Beli">
     </form>
-    
     <?php
     if (isset($_POST['beli'])) {
         if ($totalPrice > 0) {
@@ -138,5 +133,6 @@ if (isset($_POST['beli'])) {
         }
     }
     ?>
+    </center>
 </body>
 </html>
