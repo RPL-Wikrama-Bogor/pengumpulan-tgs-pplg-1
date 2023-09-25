@@ -1,10 +1,8 @@
 <?php
-
 $total_gram;
 $harga_sebelum;
 $diskon;
 $harga_setelah;
-
 ?>
 
 <!DOCTYPE html>
@@ -15,18 +13,14 @@ $harga_setelah;
   <title>Document</title>
 </head>
 <body>
-  <h3>Program untuk Menghitung Uang yang Harus di Bayar</h3>
+  <h3>Yg Harus Dibayar</h3>
   <form action="" method="post">
-    <table>
-      <tr>
-        <td>Total Berat(gram)</td>
-        <td><input type="number" name="berat"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button type="submit" name="submit">Hitung</button></td>
-      </tr>
-    </table>
+
+        <b>Total gram</b>
+        <input type="number" name="berat">
+
+        <button type="submit" name="submit">Hitung</button>
+
   </form>
 </body>
 <?php

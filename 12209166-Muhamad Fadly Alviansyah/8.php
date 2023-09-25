@@ -1,10 +1,8 @@
 <?php
-
 $bilangan=0;
 $satuan=0;
 $puluhan=0;
 $ratusan=0;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +12,11 @@ $ratusan=0;
   <title>Document</title>
 </head>
 <body>
-  <h3>Program untuk Mencari Bilangan Satuan, Puluhan, dan Ratusan dari Bilangan Bulat</h3>
+  <h3>satuan puluhan satuan</h3>
   <form action="" method="post">
-    <table>
-      <tr>
-        <td>Bilangan Bulat</td>
+        <td>Bulat</td>
         <td><input type="number" name="bilangan"></td>
-      </tr>
-      <tr>
-        <td></td>
         <td><button type="submit" name="submit">Hitung</button></td>
-      </tr>
-    </table>
   </form>
 </body>
 <?php
