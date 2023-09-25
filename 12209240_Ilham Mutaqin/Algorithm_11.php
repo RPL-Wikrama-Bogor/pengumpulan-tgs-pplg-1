@@ -16,6 +16,10 @@ $tanggal_lahir;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="style11.css">
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 </head>
 <body>
   <form action="" method="post">

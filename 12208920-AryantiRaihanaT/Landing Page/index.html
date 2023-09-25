@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body{
+            max-width:100%;
+        }
+        .admin{
+            background-color: #FFD95A;
+            border:0px;
+            height:40px;
+            width:140px;
+            padding:5px;
+            padding-left:10px;
+            padding-right: 10px;
+            border-radius: 30px;
+            float: right;
+        }
+
+        .image img{
+            /* height:380px;
+            width:760px; */
+            height: fit-content;
+            width: 610px;
+            float: right;
+        }
+
+        h1{
+            padding-left: 15px;
+        }
+
+        .section{
+            margin-top: 80px;
+        }
+
+        .baris{
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top:100px;
+        }
+        .kolom{
+            max-width: 100%;
+            width: 310px;
+            height: 120px;
+            background-color: #FFD95A;
+            margin: 3px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .kolom1,.kolom2, .kolom3, .kolom4{
+            float: left;
+        }
+
+
+        .card1{
+            float:right;
+            height: 500px;
+            width:650px;
+        }
+
+        .box img{
+            height:150px;
+            width:150px;
+        }
+
+        .box{
+            border: 1px solid black;
+            margin:15px;
+            padding:10px;
+        }
+
+        .date{
+            float:right;
+        }
+
+        .report{
+            display: inline-flex;
+        }
+        
+        .card2{
+            background-color: #f0ece8;
+            float:left;
+            margin: 30px auto;
+            padding: 50px;
+            width: 480px;
+            height: 470px;
+        }
+    
+        .form-title{
+            text-align: center;
+        }
+
+        .content{
+            margin: 50px 25px;
+        }
+
+        input{
+            width: 100%;
+        }
+        input[type="number"]{
+            border: 2px solid #f0ece8;
+             
+        }
+        input[type="text"]{
+            border: 2px solid #f0ece8;
+        }
+
+        .kirim{
+            float: right;
+            border: none;
+            background-color: #FFD95A;
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .copyright{
+            background-color: #FFD95A;
+            margin-top: 700px;
+            height: 50px;
+            
+        }
+
+        .copyright h5{
+            text-align: center;
+            padding: 16px 70px;
+        }
+
+        @media(max-width:1080px){
+            .admin{
+                margin-right: 100px;
+            }
+            .image img{
+                height:280px;
+                width:550px;
+                margin-right: 60px;
+            }
+            .section h1{
+                font-size:20px;
+            }
+            .section p{
+                font-size:15px;
+            }
+            .kolom{
+                width: 230px;
+            }
+            .card1{
+                clear: right;
+                width:350px;
+                height:170px;
+            }
+        }
+
+        @media(max-width: 768px){
+            .image img{
+                height:250px;
+                width:520px;
+                margin-right: 60px;
+            }
+
+            .kolom{
+                width: 150px;
+            }
+
+            input{
+                width: 20%;
+            }
+            .card2{
+            background-color: #f0ece8;
+            float:left;
+            margin: 0px;
+            padding: 25px;
+            width: 280px;
+            height: 440px;
+            }
+            .box img{
+                height:75px;
+                width:75px;    
+            }
+            .report p{
+                font-size: 10px;
+            }
+            .card1{
+                width:340px;
+                height:300px;
+            }
+            .content{
+                margin-top: 50px;
+            }
+        }
+
+        @media (max-width:550px){
+            .box img{
+                height:75px;
+                width:75px;    
+            }
+            .image img{
+                height:200px;
+                width:420px;
+                margin-right: 60px;
+            }
+            .card1{
+                clear: right;
+                float: left;
+                margin-bottom: 60px;
+            }
+            .section p{
+                font-size:3vw;
+            }
+            .card2{
+                margin:60px 0px;
+                
+            }
+            .kolom{
+                width: 100px;
+            }
+            .kolom h2{
+                font-size: 15px;
+            }
+            .copyright{
+                margin-top: 1000px;
+                max-width:100%;
+ 
+            }
+        }
+
+        @media(max-width:375px){
+            .image img{
+                height:120px;
+                width:290px;
+            }
+            .card2{
+                margin-top: 80px 0px;
+            }
+            .copyright{
+                margin-top: 1100px;
+                max-width:100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <button class="admin">Administrator</button>
+    <br>
+    <div class="section">
+            <div class="image">
+                <img src="layanan.png" alt="">
+            </div>
+
+            <h1>Pengaduan Masyarakat</h1>
+            <p>1. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Alias modi nemo illum beatae omnis fugit!</p>
+            <p>2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, debitis? </p>
+            <p>3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eligendi et atque dolores veniam maiores quasi error deserunt ducimus delectus?</p>
+            <p>4. Lorem ipsum dolor sit amet</p>
+            
+    </div>
+
+    <section class="baris">
+        <div class="kolom kolom1"><h2>Jumlah Kecamatan</h2><p>15</p></div>
+        <div class="kolom kolom2"><h2>Jumlah Desa</h2><p>42</p></div>
+        <div class="kolom kolom3"><h2>Jumlah Penduduk</h2><p>12.000</p></div>
+        <div class="kolom kolom4"><h2>Data per Tahun</h2><p>2023</p></div>
+    </section>
+
+    
+        <br>
+    <div class="content">
+        <div class="card1">
+            <h2>Laporan Pengaduan</h2>
+            <div class="box">
+                <h5 class="date">22 Juni 2022 : Aryanti Raihana Thamrin</h5>
+                <div class="report">
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quos reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+                    <img src="jalan.jpeg" class="ïmg-rep" alt="jalanrusak">
+                </div>
+            </div>
+        
+            <div class="box">
+                <h5 class="date">22 Juni 2022 : Aryanti Raihana Thamrin</h5>
+                <div class="report">
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quos reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+                    <img src="jalan.jpeg" class="ïmg-rep" alt="jalanrusak">
+                </div>
+            </div>
+        </div>
+
+        <div class="card2">
+            <h2 class="form-title">Buat Pengaduan</h2>
+            <div class="form">    
+                <table>
+                    <form action="">
+                        <tr>
+                            <td>NIK :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" style="padding:10px 70px"></td>
+                        </tr>
+                        <tr>
+                            <td>Nama Lengkap :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="padding:10px 70px"></td>
+                        </tr>
+                        <tr>
+                            <td>No. telp :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" style="padding:10px 70px"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Pengaduan :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" style="padding:35px 70px"></td>
+                        </tr>
+                        <tr>
+                            <td>Upload Gambar Terkait :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td><button class="kirim">Kirim</button></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div> 
+    <br>
+
+
+    <div class="copyright">
+        <h5>Copyright © 2023;</h5>
+    </div>
+
+</body>
+</html>

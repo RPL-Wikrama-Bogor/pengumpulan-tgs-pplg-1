@@ -4,7 +4,11 @@ $hh_jm;
 $mm_mnt;
 $ss_dtk;
 
+<<<<<<< HEAD
 ?>
+=======
+?>  
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +16,7 @@ $ss_dtk;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
 </head>
 
 <style>
@@ -49,6 +54,26 @@ $ss_dtk;
         </form>
     </div>
 </div>
+=======
+    <link rel="stylesheet" href="L_11.css">
+</head>
+
+<body>
+    
+    
+<div class="card">
+  <h1 style="text-align: center;">Lkpd Algoritma 11</h1>
+  <form method="post">
+
+    <input type="text" placeholder="Input Jam " style="text-align: center;" name="jm">
+    <input type="text" placeholder="Input Menit " style="text-align: center;" name="mnt">
+    <input type="text" placeholder="Input Detik" style="text-align: center;" name="dtk">
+        
+    <button name="submit" method="post" style="background-color: red;   ">Kirim</button>
+
+  </form>
+</div>    
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 
 </body>
 </html>

@@ -1,10 +1,16 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 $total_gram;
 $harga_sebelum;
 $diskon;
 $harga_setelah;
+<<<<<<< HEAD
 
+=======
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +21,7 @@ $harga_setelah;
   <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
   <h3>Program untuk Menghitung Uang yang Harus di Bayar</h3>
   <form action="" method="post">
     <table>
@@ -27,6 +34,16 @@ $harga_setelah;
         <td><button type="submit" name="submit">Hitung</button></td>
       </tr>
     </table>
+=======
+  <h3>Yg Harus Dibayar</h3>
+  <form action="" method="post">
+
+        <b>Total gram</b>
+        <input type="number" name="berat">
+
+        <button type="submit" name="submit">Hitung</button>
+
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
   </form>
 </body>
 <?php
