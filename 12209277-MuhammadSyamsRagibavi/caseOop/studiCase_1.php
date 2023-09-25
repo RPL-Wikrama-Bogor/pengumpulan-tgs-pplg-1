@@ -4,11 +4,12 @@ error_reporting(0);
 class Gas
 {
 
-    private $price;
-    private $tax;
-    private $totalGas;
+    protected $price;
+    protected $tax;
+    protected $totalGas;
     protected $result;
     public $taxResult;
+
 
     public function __construct($price, $totalGas, $tax = 0.1)
     {
@@ -17,6 +18,10 @@ class Gas
         $this->totalGas = $totalGas;
     }
 
+}
+
+class Counting extends Gas
+{   
     public function calculateTax()
     {
         $taxResult = $this->price * $this->totalGas * $this->tax;
@@ -133,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <?php
             if (isset($gasOptions[$selectedGas]) && is_numeric($liter) && $liter > 0) {
                 $pricePerLiter = $gasOptions[$selectedGas];
-                $req = new Gas($pricePerLiter, $liter);
+                $req = new Counting($pricePerLiter, $liter);
                 $tax = $req->calculateTax();
                 $totalCost = $req->calculateTotalCost();
                 echo "Bahan Bakar Yang Dipilih " .  $selectedGas . "<br>";
