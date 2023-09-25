@@ -6,33 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hasil</title>
     <style>
+        
+        body {
+            background: radial-gradient(#D0BFFF, #DFCCFB, #F7E8F6);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
         .card {
             border: 0px;
-            width: 540px;
-            padding: 40px;
+            width: 90%; 
+            max-width: 500px;
+            padding: 20px;
             border-radius: 15px;
-            margin: 150px;
-            background-color: #E5B0EA;
-             
-
-
+            background-color: white;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
         }
-
-        body {
-            background-color: #BD83CE;
-        }
-
-        @media (min-width: 576px) {
+        
+        @media screen and (max-width: 550px) {
             .card {
-                width: calc(50% - 6px);
-            }
-
-            h2 {
-                font-size: 11px;
-            }
-
-            p {
-                font-size: 10px;
+                padding: 8px;
             }
         }
     </style>
