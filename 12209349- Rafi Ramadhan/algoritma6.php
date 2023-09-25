@@ -1,4 +1,4 @@
-<?php    
+<?php
     $jam  ;
     $menit;
     $detik;
@@ -65,9 +65,7 @@
         }
 
         echo "$jam jam $menit menit $detik detik";
-    
     }
-    
     ?>
     
 </body>
