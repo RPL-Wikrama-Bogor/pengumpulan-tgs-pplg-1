@@ -66,11 +66,10 @@ class Beli extends Shell
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Case Bahan Bakar</title>
-    <link rel="stylesheet" href="style/bahanBakar.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -111,4 +110,4 @@ class Beli extends Shell
     </div>
 </body>
 
-</html> 
+</html>
