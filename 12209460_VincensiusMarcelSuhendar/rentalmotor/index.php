@@ -1,11 +1,12 @@
 <?php
 
 class Motor{
-    public $Scooter = 70000;
-    public $Motorsport = 80000;
-    public $Touring = 90000; 
-    public $Motorcross = 100000;
-    public $diskon = 0.05;
+public  $Scooter = 70000,
+        $Motorsport = 80000,
+        $Touring = 90000,
+        $Motorcross = 100000,
+        $diskon = 0.05,
+        $pajak = 10000;
 }
 $members = [
     [
@@ -15,6 +16,10 @@ $members = [
 
     [
         "nama" => "Rasya",
+        "status" => "member",
+    ],
+    [ 
+        "nama" => "Sufyan",
         "status" => "member",
     ],
 
@@ -42,16 +47,16 @@ $members = [
 
             <form action="" method="post">
                 <p>Nama Pelanggan</p>
-                <input aria-required type="text" name="nama">
+                <input required  type="text" name="nama">
                 <p>Lama Waktu Rental - Per Hari</p>
-                <input aria-required type="number" name="daily">
+                <input required  type="number" name="daily">
                 <p>Jenis Motor:</p>
-                <select name="type">
-                    <option hidden>-----------Select-----------</option>
-                    <option aria-required value="Scooter">Scooter [Rp. 70.000]</option>
-                    <option aria-required value="Motorsport">Motorsport [Rp. 80.000]</option>
-                    <option aria-required value="Touring">Motorsport Touring [Rp. 90.000]</option>
-                    <option aria-required value="Motorcross">Motorcross [Rp. 100.000]</option>
+                <select required name="type">
+                    <option hidden value="">-----------Select-----------</option>
+                    <option value="Scooter">Scooter [Rp. 70.000]</option>
+                    <option value="Motorsport">Motorsport [Rp. 80.000]</option>
+                    <option value="Touring">Motorsport Touring [Rp. 90.000]</option>
+                    <option value="Motorcross">Motorcross [Rp. 100.000]</option>
                 </select> <br><br>
                 <button type="submit" name="submit">Submit</button>
                 </form> 
@@ -62,14 +67,17 @@ $members = [
         <?php
             class Buy extends Motor{
                 
-                public function count($price, $total)
+        
+       public function count($price, $total)
                 {   
-                    $final = 10000 + $price * $total;
+                    $p = $this->pajak;
+                    $final = $p + $price * $total;
                     echo "Jenis motor yang dirental adalah: ". $_POST['type'] . " selama " . $_POST['daily'] ." hari<br>";
                     echo "Harga rental per harinya adalah Rp. " . number_format($price, 0, ',', '.') .  " dengan pajak Rp. 10.000.<br>";
                     echo "Final Price : Rp.  " . number_format($final, 0, ',', '.');
                 }
-                public function discount($price, $total)
+        
+       public function discount($price, $total)
                 {   
                     $final = $price * $total - ($price * $total * $this->diskon);
                     echo "Jenis motor yang dirental adalah: ". $_POST['type'] . " selama " . $_POST['daily'] ." hari<br>";
@@ -108,7 +116,7 @@ if(isset($_POST['submit'])){
 
     $name = $_POST['nama'];
     $namina = array_search($name, array_column($members, 'nama'));
-
+// == bakal ngecek tipe data, = daong tidak mengecek tipe data
     if($namina !== false && isset($members[$namina]['status'])) {
         echo $members[$namina]['nama'] . " adalah member! Dapat diskon 5%!<br>";
         echo $bike->discount($price, $daily);

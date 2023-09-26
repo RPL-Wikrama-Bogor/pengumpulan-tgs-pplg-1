@@ -1,11 +1,11 @@
 <?php
 
 class Shell{
-    public $Super = 15420;
-    public $VPower = 16130;
-    public $Diesel = 18310;
-    public $Nitro = 16510;
-    public $PPN = 0.10;
+    public  $Super = 15420,
+            $VPower = 16130,
+            $Diesel = 18310,
+            $Nitro = 16510,
+            $PPN = 0.10;
 }
 ?>
 
