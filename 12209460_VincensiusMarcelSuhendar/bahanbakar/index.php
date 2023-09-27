@@ -23,14 +23,14 @@ class Shell{
     <div class="form">
         <form action="" method="post">
             <p>Please enter the amount of fuel in litres:</p>
-            <input aria-required type="number" name="liter">
+            <input required type="number" name="liter">
         <p>Select fuel type:</p>
-        <select name="fuel">
+        <select required name="fuel">
             <option hidden>-----------Select-----------</option>
-            <option aria-required ="Shell Super">Shell Super</option>
-            <option aria-required value="Shell V-Power">Shell V-Power</option>
-            <option aria-required value="Shell V-Power Diesel">Shell V-Power Diesel</option>
-            <option aria-required value="Shell V-Power Nitro">Shell V-Power Nitro</option>
+            <option value="Shell Super">Shell Super</option>
+            <option value="Shell V-Power">Shell V-Power</option>
+            <option value="Shell V-Power Diesel">Shell V-Power Diesel</option>
+            <option value="Shell V-Power Nitro">Shell V-Power Nitro</option>
         </select> <br><br>
         <button type="submit" name="submit">Confirm Purchase</button>
         </form>
