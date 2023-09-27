@@ -57,7 +57,11 @@ body{
     margin: auto;
 }
 
+<<<<<<< HEAD
+input[type="number"] {
+=======
 input[type="number"]{
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
     width: 100%;
     padding: 10px;
     border: 1px solid black;

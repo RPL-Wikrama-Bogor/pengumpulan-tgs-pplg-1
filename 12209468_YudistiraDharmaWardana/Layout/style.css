@@ -1,0 +1,201 @@
+/* // CSS Bagian 1 */
+
+/* navbar */
+.navbar {
+  width: 100%;
+  overflow: auto;
+  margin-right: 100px;
+}
+
+/* Navbar links */
+.navbar a {
+  font-family: 'Courier New', Courier, monospace; 
+  float: right;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 20px;
+  border-radius: 9px;
+}
+.navbar a:hover {
+  background-color: #FEFFAC;
+}
+.active {
+  background-color: #ffd000;
+}  
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+@media screen and ( max-width: 500px) {
+  .content-kanan h1 {
+    text-align: center;
+  }
+  img{
+      width: auto;
+      height: auto;
+      float: none;
+  }
+ .container{
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+  }
+}
+/* body */
+.container{
+  display: flex;
+  margin: 0;
+}
+img{
+width: 100%;
+max-width: 40rem;
+height: auto;
+}
+.content-kanan h1{
+  font-size: 19px;
+  /* margin-left: 20px; */
+}
+h2{
+  font-size: 10px;
+  /* margin-left: 20px; */
+}
+.lower{
+  display: flex;
+}
+.box{
+  margin-right: 10px;
+  text-align: center;
+  width: 1000px;
+  height: 100px;
+  margin-top: 65px;
+}
+
+/* lower */
+
+
+.item{
+width: 304px;
+height: 110px;
+background-color: khaki;
+margin: 3px;
+  margin-top: 50px;
+box-sizing: border-box;
+flex-grow:1;
+flex-shrink: 1; 
+}
+
+.flex-container{
+display: flex;
+flex-wrap: wrap; 
+flex-direction: row; 
+justify-content: center; 
+}
+.item h1{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+.item h2{
+  text-align: center;
+  font-size: 14px;
+}
+
+/* bagian 2 */
+.container-2{
+display: flex;
+}
+
+  .form-container {
+    width: 540px;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+label{
+  font-size: 11px;
+}
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button[type="submit"] {
+  background-color: #ffd000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px; 
+}
+
+button[type="submit"]:hover {
+  background-color: #ffd000;
+}
+/* bagian foto */
+.content-1{
+  border: 3px solid black;
+  width: 460px;
+  display: flex;
+  margin: auto;
+  margin: 50px 10px 10px 100px;
+}
+@media screen and ( max-width: 890px) {
+  .form-muncul{
+    display: none;
+    margin-top: 00px;
+  }
+  .content-1{
+    border: 3px solid black;
+    width: 460px;
+    display: flex;
+    margin: auto;
+  }
+}
+/* Reset CSS */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Styling Footer */
+.footer {
+background-color: #ffd000;
+color: #fff;
+padding: 20px 0;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-content {
+font-size: 14px;
+text-align: center;
+}
+/* Media Query untuk Responsif */
+@media screen and (max-width: 768px) {
+.footer-content {
+    font-size: 12px;
+}
+}

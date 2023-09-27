@@ -5,6 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h2>Detik +1</h2>
+    <form action="" method="post">
+        <p>Jam</p>
+        <input type="number" name="jam">
+        <p>Menit</p>
+        <input type="number" name="menit">
+        <p>Detik</p>
+        <input type="number" name="detik">
+        <button type="submit" name="submit"> Submit</button>
+        <br>
+
+        <?php
+
+        $jam;
+        $menit;
+        $detik;
+        $hasil;
+
+        if (isset($_POST['submit'])) {
+            $jam = $_POST['jam'];
+            $menit = $_POST['menit'];
+            $detik = $_POST['detik'];
+
+            $detik++;
+
+            if($detik > 59){
+                $detik %= 60;
+                $menit++;
+                if($menit > 59){
+                    $menit %= 60;
+                    $jam++;
+                    if($jam > 23){
+                        $jam %= 24;
+                    }
+                }
+            }
+            else if($menit > 59){
+                $menit %= 60;
+                $jam++;
+                if($jam > 23){
+                    $jam %= 24;
+                }
+            }
+            else if($jam > 23){
+                $jam %= 24;
+            }
+            
+            echo $jam . " : " . $menit . " : " . $detik;
+        }
+
+        ?>
+    </form>
+=======
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -134,6 +192,7 @@ if (isset($_POST['submit'])) {
     </form>
 </div>
 </div>
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 </body>
 
 </html>
