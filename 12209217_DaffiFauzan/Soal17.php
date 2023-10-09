@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>Lkpd Algoritma 17</h1>
 <form method="post">
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

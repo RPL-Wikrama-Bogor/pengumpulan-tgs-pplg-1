@@ -43,11 +43,12 @@ body{
 .box{
     width: 100%;
     max-width: 400px;
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 2rem;
     border-radius: 10px;
     box-shadow: 1px 7px 58px rgba(0, 0, 0, 0.1);
     margin: auto;
 }
+
 .result{
     width: 100%;
     max-width: 400px;
