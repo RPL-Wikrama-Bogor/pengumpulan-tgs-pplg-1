@@ -16,20 +16,22 @@ $tanggal_lahir;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="L_11.css">
 </head>
+
 <body>
-  <form action="" method="post">
-    <table>
-      <tr>
-        <td>Input Nomor Pegawai</td>
-        <td><input type="number" name="no_pegawai"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button type="submit" name="submit">Submit</button></td>
-      </tr>
-    </table>
+
+<div class="card">
+  <h1 style="text-align: center;">Lkpd Algoritma 11</h1>
+  <form method="post">
+
+    <input type="text" id="no_pegawai" name="no_pegawai" placeholder="Input No Pegawai">
+    
+    <button type="submit" name="submit">Submit</button>
+    
   </form>
+</div>
+
 </body>
 <?php
 
