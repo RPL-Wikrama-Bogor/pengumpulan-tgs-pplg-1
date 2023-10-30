@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <div style="display: flex;width: 500px ; height: 500px ; background-color: #D3D3D3 ; justify-content:center; margin-left: auto; margin-right: auto ;">
         <form action="" method="post">
             <p>Input 1</p>
             <input type="number" name="a" id="">
@@ -44,5 +44,10 @@
             }
             ?>
         </form>
+    </div>
+
+
 </body>
+
+  
 </html>
