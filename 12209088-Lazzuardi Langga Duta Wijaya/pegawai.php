@@ -79,7 +79,7 @@ if (isset($_POST['submit'])){
         echo $bulan. " Desember";
     }
 
-    $tanggal_lahir = $tanggal  $bulan   $tahun;
+    $tanggal_lahir = $tanggal + $bulan +  $tahun;
 
     echo $no_golongan;
     echo "<br>";
