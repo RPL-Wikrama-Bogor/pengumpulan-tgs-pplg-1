@@ -25,7 +25,7 @@
     <button @click="showPassword">showPassword</button>
   <p>==========================================</p>
   <button @click="counterNumber">methods {{ counterButton }}</button>
-  <button>computed {{ numberComputed }}</button>
+  <button @click="countComputed">computed {{ numberComputed }}</button>
   
   <p>===================class and style===========================</p>
   
@@ -54,7 +54,7 @@
       return{
         kelas: '',
         daftarKelas:['RPL 1','RPL 2','RPL 3'],
-        counterButton: 1,
+        counterButton: 0,
         numberComputed: 0,
         count: 1,
         number: 1,
@@ -94,7 +94,7 @@
     },
       computed:{
         countComputed(){
-          this.numberComputed += 6;
+          this.numberComputed += 5;
         }
     },
   }
