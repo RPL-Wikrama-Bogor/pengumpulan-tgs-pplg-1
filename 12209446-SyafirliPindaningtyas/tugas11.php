@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hasil</title>
     <style>
+<<<<<<< HEAD
+        .card {
+            border: 0px;
+            width: 540px;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 150px;
+            background-color: #E5B0EA;
+             
+
+
+        }
+
+        body {
+            background-color: #BD83CE;
+        }
+
+        @media (min-width: 576px) {
+            .card {
+                width: calc(50% - 6px);
+            }
+
+            h2 {
+                font-size: 11px;
+            }
+
+            p {
+                font-size: 10px;
+=======
         
         body {
             background: radial-gradient(#D0BFFF, #DFCCFB, #F7E8F6);
@@ -29,6 +58,7 @@
         @media screen and (max-width: 550px) {
             .card {
                 padding: 8px;
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
             }
         }
     </style>
