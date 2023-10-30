@@ -1,5 +1,8 @@
 <?php
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
 
 $hh=0;
 $mm=0;
@@ -62,6 +65,9 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+<<<<<<< HEAD
+</html>
+=======
 </html>
 =======
 $hh;
@@ -123,3 +129,4 @@ $ss;
 </body>
 </html>
 >>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
