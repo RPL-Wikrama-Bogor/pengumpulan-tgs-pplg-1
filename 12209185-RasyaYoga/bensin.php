@@ -8,11 +8,10 @@
 <body>
         <form action="" method="post">
                 <b>Jumlah Liter</b>
-                <td><input type="number" name="liter"></td>
-                <br>
+                <input type="number" name="liter">
+              <br>
 
 <b>tipe bahan bakar</b>
-                <td>
                     <select name="bahanBakar">
                         <option hidden>-----------Pilih-----------</option>
                         <option value="Shell Super">Super Shell</option>
@@ -20,8 +19,6 @@
                         <option value="Shell V-Power Diesel">Shell V-Power Diesel</option>
                         <option value="Shell V-Power Nitro">Shell V-Power Nitro</option>
                     </select>
-                    <br>
-                    
                 <button type="submit" name="button">Beli</button>
         </form>
 </body>
