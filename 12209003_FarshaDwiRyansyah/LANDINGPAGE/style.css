@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+    .wrap {
+        text-align: center;
+    }
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    padding: 20px;
+}
+
+.nav{
+    background-color: #E55604;
+    padding: 5px 5px;
+    float: right;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.nav:hover{
+    background-color: #E55604;
+}
+
+.wrap{
+    clear: right;
+}
+.text{
+    margin-top: 50px;
+    margin-bottom: 300px;
+}
+
+.img{
+    width: 50%;
+    float: right;
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.card{
+    text-align: center;
+    background-color: #E55604;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.laporan{
+    margin-top: 50px;
+}
+
+.form{
+    background: rgb(211, 209, 209);
+    float: left;
+    padding: 15px;
+    width: 50%;
+}
+
+.form h3{
+    text-align: center;
+}
+
+.input{
+    width: 75%;
+}
+
+.input1{
+    width: 75%;
+    height: 100px;
+}
+
+.submit{
+    background: #E55604;
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.kotak{
+    float: right;
+    width: 40%;
+    border-style: groove;
+    padding: 15px;
+    height: 25%;
+    margin-bottom: 5px;
+}
+
+.kotak p{
+    text-align: right;
+}
+
+.kotak img{
+    float: right;
+    width: 250px;
+    height: 150px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+footer{
+    margin-top: 500px;
+    background-color: #E55604(255, 187, 61);
+    text-align: center;
+}

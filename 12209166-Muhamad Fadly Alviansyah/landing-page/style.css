@@ -1,0 +1,153 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  min-height: 100vh;
+  margin: 20px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: end;
+}
+
+.navbar button{
+  padding: 5px 20px;
+  background-color: #ffc447;
+  border: none;
+  border-radius: 20px;
+}
+
+.parent{
+  display: flex;
+  flex-direction: row;
+}
+
+.article{
+  padding: 0px 20px;
+}
+
+.image{
+  width: 70%;
+}
+
+.image img{
+  max-width: 100%;
+}
+
+.data-parent{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.data-child{
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffc447;
+  padding: 15px 0;
+  width: 333px;
+  margin: 3px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.parent{
+  margin: 30px 0;
+  display: flex;
+  gap: 40px;
+  padding: 0px 40px;
+}
+
+.form{
+  width: 60%;
+  padding: 10px;
+  background-color: #f3f3f3;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.form h2{
+  text-align: center;
+}
+
+label{
+  display: block;
+  margin: 5px 0;
+}
+
+input, textarea{
+  width: 100%;
+  border: none;
+}
+
+textarea{
+  padding: 5px;
+}
+
+input{
+  padding: 0 5px;
+  height: 25px;
+}
+
+.form button{
+  float: right;
+  margin-top: 50px;
+  border: none;
+  background-color: #ffc447;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.report-content{
+  margin: 20px 0;
+  padding: 20px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.column:last-child{
+  display: flex;
+  gap: 40px;
+}
+
+.report-date{
+  text-align: end;
+}
+
+.report-image{
+  width: 200px;
+}
+
+footer{
+  padding: 10px 0;
+  text-align: center;
+  background: #ffc447;
+}
+
+@media (max-width: 1200px){
+  .parent{
+    flex-direction: column;
+  }
+
+  .image{
+    margin: 20px 0px;
+    width: 100%;
+  }
+
+  .image img{
+    width: 100vh;
+  }
+
+  .form{
+    width: 100%;
+  }
+}
