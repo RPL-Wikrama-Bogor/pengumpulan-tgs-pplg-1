@@ -6,9 +6,7 @@ class Database{
     private $pass = DB_PASS;
     private $dbnm = DB_NAME;
 
-    /* dbh = Database Handle */
     private $dbh;
-    /* stmt = Statment */
     private $stmt;
 
     public function __construct()

@@ -3,7 +3,7 @@
 class Buku extends Controller {
 
     public function index(){
-        $data['page'] = 'Data Buku';
+        $data['judul'] = ' ';
         $data['buku'] = $this->model('BukuModel')->getAllBuku();
         $this->view('templates/header', $data);
         $this->view('buku/index', $data);
@@ -12,7 +12,7 @@ class Buku extends Controller {
 
     public function tambah()
     {
-        $data['page'] = 'Tambah Buku';
+        $data['judul'] = '';
         $this->view('templates/header', $data);
         $this->view('buku/create');
         $this->view('templates/footer');
@@ -31,7 +31,7 @@ class Buku extends Controller {
 
     public function edit($id){
 
-        $data['page'] = 'Edit Buku';
+        $data['judul'] = '';
         $data['buku'] = $this->model('BukuModel')->getBukuById($id);
         $this->view('templates/header', $data);
         $this->view('buku/edit', $data);

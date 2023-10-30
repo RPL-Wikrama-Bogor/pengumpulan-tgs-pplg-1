@@ -23,7 +23,6 @@ class bukuModel{
     {
         $query = "INSERT INTO tb_buku(judul, penulis, tgl_selesai) VALUES (:judul, :penulis, :tgl_selesai)";
         $this->db->query($query);
-        $this->db->bind('id', $data['id']);
         $this->db->bind('judul', $data['judul']);
         $this->db->bind('penulis', $data['penulis']);
         $this->db->bind('tgl_selesai', $data['tgl_selesai']);

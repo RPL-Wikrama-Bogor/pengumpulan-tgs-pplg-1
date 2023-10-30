@@ -14,7 +14,8 @@ class App{
                 $this->controller =$url[0];
                 unset($url[0]);
             }
-            require_once '../App/Controllers/' . $this->controller . '.php';
+            require_once '../App/Controllers/' .
+             $this->controller . '.php';
             $this->controller =new $this->controller;
 
             if (isset($url[1])){
