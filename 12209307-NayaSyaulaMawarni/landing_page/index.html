@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+      body{
+        background-color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .button{
+        float: right;
+        background-color: #ffcc84;
+        text-decoration: black;
+        padding: 8px 15px;
+        border-radius: 50px;
+        margin-bottom: 40px;
+    }
+
+    .konten{
+        padding: 5px;  
+        margin: 100px 0px;  
+    }
+
+    .text {
+        flex: 1;
+        padding-right: 20px;
+        float: left;
+        margin-top: -2em;
+        margin-left: 3em;
+        font-size: large;
+    }
+
+    ol {
+        flex-wrap: wrap; 
+	    flex-direction: row;
+	    justify-content: center;
+        padding-right: 55%;
+        line-height: 150%;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .foto img {
+        max-width: 100%;
+        height: auto;
+        flex: 1;
+        margin: 50px 0px;
+    }
+        
+    .foto{
+        width: 500px;
+        max-width: 100%;
+        float: right;
+        margin-top: -20em;
+    }
+
+    .baris{
+        box-sizing:content-box;
+        width: 100%;
+        height: 35%;
+		padding:3px;
+        margin-top: 150px;
+        clear: both;
+    }
+
+    .jumlah1{
+        width: 300px;
+        height: 100px;
+        background-color: #ffcc84;
+        margin: 5px;
+        box-sizing: border-box;
+	    padding: 40px;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 400px; /* Merubah maksimum lebar container menjadi 400px */
+        margin-left: 1em; /* Mengurangi margin kiri menjadi 1em */
+        padding: 7px; /* Mengurangi padding menjadi 10px */
+        border: 1px solid #ccc;
+        border-radius: 2px; /* Mengurangi border-radius menjadi 3px */
+        background-color: #f9f9f9;    
+    }
+
+    .container h2{
+        text-align: center;    
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #ffcc84;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left: 25em;
+        }
+
+        button:hover {
+            background-color: #ffcc84;
+        }
+
+        .laporan {
+            max-width: 400px;
+            margin-top: -36em;
+            margin-left: auto;
+            margin-right: 20em;
+        }
+
+/* Gaya untuk judul laporan */
+        .textlapor {
+            font-size: 24px;
+        }
+
+/* Gaya untuk kontainer dengan border di sisi kiri */
+        .garis-tepi {
+            border: 1px solid;
+            padding: 1em;
+            margin-top: 2em;
+            width: 40em;
+            height: 10em;
+        }
+
+/* Gaya untuk tanggal laporan */
+
+        .tglapor {
+            font-size: 14px;    
+            font-weight: bold;    
+            margin-left: 62%;   
+            margin-top: -1px;
+        }
+
+/* Gaya untuk keterangan laporan */
+        .keterangan {
+            font-size: 14px;
+        }
+
+/* Gaya untuk gambar laporan */
+        .laporimg {
+            max-width: 100%;
+            display: block;
+            margin-top: -50px;
+            width: 150px;
+            margin-left: auto;
+        }
+
+        .footer{
+            background-color: #ffcc84;
+            text-align: center;
+            padding: 1px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 360px) {
+            button {
+            background-color: #ffcc84;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left: 15em;
+        }
+/* Gaya untuk judul laporan */
+.textlapor {
+    font-size: 14px;
+}
+
+/* Gaya untuk kontainer dengan border di sisi kiri */
+.garis-tepi {
+    border: 1px solid;
+    padding: 1em;
+    margin-top: 5em;
+    width: 80%; /* Lebar penuh pada layar kecil */
+    height: auto; /* Tinggi dinamis sesuai kontennya */
+}
+
+/* Gaya untuk tanggal laporan */
+.tglapor {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: auto; /* Geser ke kanan pada layar kecil */
+    margin-top: -1px;
+}
+
+/* Gaya untuk gambar laporan */
+.laporimg {
+    max-width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto; /* Geser ke kanan pada layar kecil */
+}
+
+    /* Gaya untuk layar dengan lebar maksimum 768px */
+    .laporan {
+        margin-top: 2em; /* Sesuaikan margin atas pada layar kecil */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text {
+        margin-left: 0; /* Hapus margin kiri pada layar kecil */
+    }
+
+    .foto {
+        float: none; /* Hilangkan floating pada gambar pada layar kecil */
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .baris {
+        flex-direction: column; /* Tampilan kolom pada layar kecil */
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+<body>
+<a href="" class="button">Administrator</a>
+<section class="konten">
+    <section class="konten">
+        <div class="text">
+            <h1>Pengaduan Masyarakat</h1>
+                <ol>
+                    <li>Lorem ipsum,dolor sit amet consectetur adipisicing elit.Alias modi nemo illum beatae omnis fugit!</li>
+                    <li>Lorem ipsum,dolor sit amet consectetur adipisicing elit.Aspernatur,debitis?</li>
+                    <li>Lorem ipsum dolor sit,amet consectetur adipisicing elit.Voluptate eligendi et atque dolores veniam maiores quasi error deserunt ducimus delestus?</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+        </div>
+    </section>
+    <div class="foto">
+    <img src="page.png">
+</div>
+
+    <section class="baris" style="display: flex;">
+        <div class="jumlah1">Jumlah Kecamatan <br> 15</div>
+        <div class="jumlah1">Jumlah Desa <br> 42</div>
+        <div class="jumlah1">Jumlah Penduduk <br> 1.200</div>
+        <div class="jumlah1">Data Per Tahun <br> 2023 </div>
+    
+    </section>
+
+    <div class="container">
+        <h2>Buat Pengaduan</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nama">NIK :</label>
+                <input type="text" id="nik" name="nik" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Nama Lengkap :</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="no_barang">No Telp :</label>
+                <input type="text" id="no_telp" name="no_telp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pengaduan">Pengaduan :</label>
+                <textarea id="pengaduan" name="pengaduan" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="gambar">Upload Gambar Terkait :</label>
+                <input type="file" id="gambar" name="gambar" accept="image/*">
+            </div>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    
+    <div class="laporan">
+        <h2 class="textlapor">Laporan Pengaduan</h2>
+        <div class="garis-tepi">
+            <p class="tglapor">22 Juni 2022 : Mawarni</p>
+            <p class="keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos <br>reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+            <img class="laporimg" src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg" alt="">
+        </div><br>
+        <div class="garis-tepi">
+            <p class="tglapor">22 Juni 2022 : Mawarni</p>
+            <p class="keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos <br> reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+            <img class="laporimg" src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text_footer">Copyright © 2023 Naya Syaula Mawarni</p>
+    </div>
+
+</body>
+</html>
