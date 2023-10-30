@@ -119,6 +119,15 @@ $products = [
           $hargaNon = 0;
           $totalNon = 0;
         }
+      }else{
+        $namaRakitan = 0;
+        $jumlahRakitan = 0;
+        $hargaRakitan = 0;
+        $totalRakitan = 0;
+        $namaNon = 0;
+        $jumlahNon = 0;
+        $hargaNon = 0;
+        $totalNon = 0;
       }
       ?>
       <table>
