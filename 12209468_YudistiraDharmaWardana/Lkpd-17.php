@@ -17,11 +17,14 @@
             $jumlah_bilangan = 0;
             $total_bilangan = 0;
 
+<<<<<<< HEAD
+=======
             for ($i = 1; $i <= 20; $i++) {
                 $input_name = "bilangan$i";
                 $bilangan = (int)$_POST[$input_name];
                 $total_bilangan += $bilangan;
                 $jumlah_bilangan++;
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
 
                 if ($bilangan > $bilangan_terbesar) {
                     $bilangan_terbesar = $bilangan;
