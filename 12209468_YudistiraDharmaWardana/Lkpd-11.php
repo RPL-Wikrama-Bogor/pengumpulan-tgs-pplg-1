@@ -16,6 +16,22 @@ $tanggal_lahir;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<<<<<<< HEAD
+</head>
+<body>
+  <form action="" method="post">
+    <table>
+      <tr>
+        <td>Input Nomor Pegawai</td>
+        <td><input type="number" name="no_pegawai"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" name="submit">Submit</button></td>
+      </tr>
+    </table>
+  </form>
+=======
   <link rel="stylesheet" href="L_11.css">
 </head>
 
@@ -32,6 +48,7 @@ $tanggal_lahir;
   </form>
 </div>
 
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 </body>
 <?php
 

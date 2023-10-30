@@ -1,10 +1,22 @@
 <style>
+<<<<<<< HEAD
+=======
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  p {
+    text-align: center;
+
+=======
     font-family: 'Poppins', sans-serif;
   }
 
@@ -65,6 +77,7 @@
 
   .form input[type='submit']:hover {
     background-color: #0056b3;
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
   }
 </style>
 <!DOCTYPE html>
@@ -77,6 +90,23 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+  <h1>Employee</h1>
+  <div class="form">
+    <form action="" method="post">
+      <table>
+        <tr>
+          <td>Employee Number : </td>
+          <td><input type="text" name="employee"></td>
+        </tr>
+        <tr>
+          <td><button type="submit" name="submit">Submit</button></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <p><?php
+=======
   <h2>Employee</h2>
   <div class="base">
     <div class="form">
@@ -90,6 +120,7 @@
   <div class="base">
     <p>
       <?php
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
       $employee_num;
       $class_num;
       $day;
@@ -138,9 +169,13 @@
           echo "Employee Number is does not match";
         }
       }
+<<<<<<< HEAD
+      ?></p>
+=======
       ?>
     </p>
   </div>
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 </body>
 
 </html>

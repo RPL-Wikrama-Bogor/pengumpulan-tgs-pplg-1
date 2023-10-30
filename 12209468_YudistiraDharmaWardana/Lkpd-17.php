@@ -1,9 +1,39 @@
+<<<<<<< HEAD
+<?php
+
+$i; 
+$terbesar; 
+$terkecil;
+$r_r;
+
+?>
+
+=======
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
+</head>
+<body>
+
+<form action="">
+
+
+?>
+<input type="text">
+
+
+
+
+</form>
+
+</body>
+</html>
+=======
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -51,4 +81,5 @@
         <input type="submit" value="Hitung">
     </form>
 </body>
-</html>
+</html>  
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
