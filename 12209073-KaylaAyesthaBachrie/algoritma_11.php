@@ -27,32 +27,34 @@
         min-height: 100vh;
     }
 
-    .card {
+    .container {
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        width: 300px;
+        width: 700px;
         transition: transform 0.3s;
     }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Kode Pegawai</h2>
-        <div class="card-body">
-            <form method="post" action="#">
-                <table>
-                    <tr>
-                        <td>Kode Pegawai</td>
-                        <td>  :  </td>
-                        <td><input type="number" name="noPegawai"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" name="submit" value="kirim"></td>
-                    </tr>
-                </table>
-            </form>
+    <div class="container">
+        <div class="card">
+            <h2>Kode Pegawai</h2>
+            <div class="card-body">
+                <form method="post" action="">
+                    <table>
+                        <tr>
+                            <td>Kode Pegawai</td>
+                            <td>  :  </td>
+                            <td><input type="number" name="noPegawai"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="submit" value="kirim"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
     </div>
     
@@ -106,6 +108,7 @@
                 echo "<br>";
             }
             else {
+                echo "<br>";
                 echo "Kode Pegawai Tidak Sesuai<br>Inputkan 11 Angka Kode Pegawai";
             }
 
