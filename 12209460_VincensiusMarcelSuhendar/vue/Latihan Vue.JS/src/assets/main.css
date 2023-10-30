@@ -33,6 +33,11 @@ a,
     padding: 0 2rem;
   }
 }
-.fs{
-  font-size: 20px;
+
+.c1{
+  margin-right: 2rem;
+}
+
+.c2{
+  margin-left: 2rem;
 }
