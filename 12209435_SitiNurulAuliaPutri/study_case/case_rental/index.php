@@ -40,10 +40,10 @@ require("backend.php");
 
         </form>
         <?php
-           $proses = new Rental();
-           $proses->setHarga(70000, 80000, 90000, 12000);
+           $proses = new Rental(); //manggil class
+           $proses->setHarga(70000, 80000, 90000, 12000); //set harga
            if (isset($_POST['submit'])) {
-               $proses->nama  = $_POST['nama'];
+               $proses->nama  = $_POST['nama']; //ngambil data berdasarkan variable
                $proses->jenis = $_POST['jenis'];
                $proses->waktu = $_POST['waktu'];
                 

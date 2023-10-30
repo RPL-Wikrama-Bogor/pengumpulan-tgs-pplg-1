@@ -13,26 +13,26 @@ class Mobil
             $BMW;
 
 
-     function __construct(){
+     function __construct(){ //ngisi nilai tapi di awal
         $this->diskon = 0.1;
         $this->pajak  = 10000;
-     }
+     } //dibuat isi variabel nya. isi variabel harus diisi sebelum class di mulai
 
      public function setHarga($type1, $type2, $type3, $type4) {
         $this->Honda   = $type1;
         $this->Suzuki  = $type2;
         $this->Bugatti = $type3;
         $this->BMW     = $type4;
-    } 
+    } //buat set harga disini karena harganya di isi di front end
 
     public function getNama(){
         $data = $this->nama;
         return $data;
-    }
+    } // dapet isi nama
 
     public function getMember(){
         return $this->member;
-    }
+    } // dapetin isi member
 
     public function getHarga(){
         $data["Honda"]   = $this->Honda;
@@ -40,7 +40,7 @@ class Mobil
         $data["Bugatti"] = $this->Bugatti;
         $data["BMW"]     = $this->BMW;
         return $data;
-    }
+    } // buat ambil harga yang udah di buat 
 }
 
 class Rental extends Mobil
@@ -78,9 +78,7 @@ class Rental extends Mobil
             echo "Besar yang harus dibayarkan adalah Rp. " . number_format($this->Member(), 0, '', '.') . "<br>";
             echo "<br><br> <hr style='border:1px #0F2C59 solid; width:60%'><br>";            
             echo "</div>"; 
-
         }else {
-
             echo "<div style='text-align: center; border:3px gray solid; width: 36%; margin-left: 32%;'>";
             echo "<h2> Struk Rental Mobil </h2>";
             echo "<hr style='border:1px #0F2C59 solid; width:60%'> <br>"; 
