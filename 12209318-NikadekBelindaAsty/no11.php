@@ -81,11 +81,21 @@
             box-shadow: 0 5px #e04893;
         }
 
+<<<<<<< HEAD
+        /* button:hover {
+            background-color: #ddd6fe;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <h2>Kode Pegawai</h2> -->
+=======
        
     </style>
 </head>
 <body>
    
+>>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
     <form method="post" action="#">
         <table>
             <h2>Kode Pegawai</h2>
