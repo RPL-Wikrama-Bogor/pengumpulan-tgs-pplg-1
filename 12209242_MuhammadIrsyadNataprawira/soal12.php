@@ -26,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Penambahan 1 Detik pada Waktu</title>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
 </head>
 
 <body>
@@ -44,6 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </html>
 
+<<<<<<< HEAD
+=======
 =======
     <style>
         body {
@@ -118,3 +123,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </html>
 >>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8

@@ -68,6 +68,9 @@
         <form method="post" action="">
             <label for="tiketTerjualVip">Tiket Terjual VIP:</label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
             <input type="number" id="tiketTerjualVip" name="tiketTerjualVip" max="50">
 
             <label for="tiketTerjualEks">Tiket Terjual Eksekutif:</label>
@@ -75,6 +78,8 @@
 
             <label for="tiketTerjualEko">Tiket Terjual Ekonomi:</label>
             <input type="number" id="tiketTerjualEko" name="tiketTerjualEko" max="50">
+<<<<<<< HEAD
+=======
 =======
             <input type="number" id="tiketTerjualVip" name="tiketTerjualVip" max="50" required>
 
@@ -84,6 +89,7 @@
             <label for="tiketTerjualEko">Tiket Terjual Ekonomi:</label>
             <input type="number" id="tiketTerjualEko" name="tiketTerjualEko" max="50" required>
 >>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
 
             <input type="submit" value="Hitung Keuntungan">
         </form>

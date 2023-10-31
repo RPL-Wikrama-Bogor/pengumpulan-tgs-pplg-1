@@ -1,39 +1,9 @@
-<<<<<<< HEAD
-<?php
-
-$i; 
-$terbesar; 
-$terkecil;
-$r_r;
-
-?>
-
-=======
->>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-</head>
-<body>
-
-<form action="">
-
-
-?>
-<input type="text">
-
-
-
-
-</form>
-
-</body>
-</html>
-=======
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -47,11 +17,14 @@ $r_r;
             $jumlah_bilangan = 0;
             $total_bilangan = 0;
 
+<<<<<<< HEAD
+=======
             for ($i = 1; $i <= 20; $i++) {
                 $input_name = "bilangan$i";
                 $bilangan = (int)$_POST[$input_name];
                 $total_bilangan += $bilangan;
                 $jumlah_bilangan++;
+>>>>>>> 5ff65bc995fc3cead8c306f4e4edf8c23a3b0df8
 
                 if ($bilangan > $bilangan_terbesar) {
                     $bilangan_terbesar = $bilangan;
@@ -82,4 +55,3 @@ $r_r;
     </form>
 </body>
 </html>  
->>>>>>> de281eeaed3c9f909df4fefc5f1841e25f6426e6
