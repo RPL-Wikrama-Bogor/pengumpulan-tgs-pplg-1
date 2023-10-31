@@ -41,12 +41,33 @@
   <p>-----List Rendering-----</p>
 
   <ul>
-    <li v-for="(data, index) in dataKelas">{{index+1}} {{data}}</li>
+    <li v-for="(datas, index) in dataKelas">{{index+1}} {{datas}}</li>
   </ul>
 
   <p>-----V-model-----</p>
   <input v-model="inputKelas" type="text" />
   {{ inputKelas }}
+
+  <p>-----Todolist-----</p>
+  <br>
+  <input type="text" v-model="formDataMurid.name" placeholder="Nama">
+  <br>
+  <input type="text" v-model="formDataMurid.class" placeholder="Kelas">
+  <br>
+  <button @click="formData()">Submit</button>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Nama</th>
+      <th>Kelas</th>
+    </tr>
+    <tr v-for="(item, index) in dataMurid" :key="index">
+      <td>{{ index +1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.class }}</td>
+      <td><button @click="deleteData(item.id)">Hapus</button></td>
+    </tr>
+  </table>
 </template>
 
 <script>
@@ -70,6 +91,15 @@
       inputType:'password',
       type:'datetime-local',
       isActive:true,
+      dataMurid:[{
+        id: Date.now(),
+        name:'Ragibavi',
+        class:'11'
+      }],
+      formDataMurid:[{
+        name:'',
+        class:'',
+      }]
     }
   },
   methods:{
@@ -89,6 +119,13 @@
       } else {
         this.isActive = true
       }
+    },
+    formData(){
+      this.formDataMurid.id = Date.now()
+      this.dataMurid.push(this.formDataMurid)
+    },
+    deleteData(id){
+      this.dataMurid = this.dataMurid.filter(item => item.id !=id)
     }
   },
   computed:{
