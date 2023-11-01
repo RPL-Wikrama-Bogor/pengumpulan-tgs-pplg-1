@@ -8,19 +8,22 @@
   <div class="profil-info"> 
     <p class="profil-nama">{{ name }}</p> 
     <p class="profil-time">{{ date }}</p>
-    <a href="" class="fa fa-mail-forward" style="font-size:36px"></a>
+   
+
   </div> 
    </header>
-
+   <a :href="link" target="_blank">
+ <img :src="sheare" alt="" class="share">
+</a>
   </div>
 </template>
 
 <script>
 export default{
-    props:['img1','img2','img3','title','deskripsi','name','date']
+    props:['img1','img2','img3','title','deskripsi','name','date','link','sheare']
 }
 </script>
-<style>
+<style lang="css">
 .card-word{
   margin: auto;
   text-align: start;
@@ -39,6 +42,7 @@ export default{
   line-height: 30px;
   font-family:'Times New Roman', Times, serif;
   color: #7D7C7C;
+  white-space:normal;
 }
 
 .card-word .foto{
@@ -51,14 +55,26 @@ export default{
   font-family: monospace;
   color:#657786;
 }
+.share{
+  float: right;
+  margin-right: 40px;
+height: 40px;
+width: 40px;
+border-radius: 100%;
+}
 .profil-header{
   display: flex;
   align-items: center;
   text-align: left;
+  margin-top: 30px;
 }
 .profil-info{
   margin-left: 20px;
 
+}
+.profil-info a{
+  width: 20px;
+  height: 10px;
 }
 .card-word .profil-nama{
   font-size: 16px;
@@ -68,6 +84,7 @@ export default{
 .card-word .profil-time{
   color: #a9a9a9;
   font-size: 14px;
+  font-family:'Times New Roman', Times, serif;
 }
 .card-word .profil-gambar{
   border-radius: 50%;
