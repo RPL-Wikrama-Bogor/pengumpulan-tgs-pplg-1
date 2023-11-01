@@ -2,7 +2,7 @@
   
   <Card v-for="item in data"
    :title="item.title" :desc="item.desc" :img="item.img" 
-   :pfp="item.pfp" :btn="item.btn" :nama="item.nama" :tanggal="item.tanggal">
+   :pfp="item.pfp" :btn="item.btn" :nama="item.nama" :tanggal="item.tanggal" :link="item.link">
     <card-service></card-service>
   </Card>
 
@@ -25,7 +25,18 @@ export default {
           tanggal: "31 Oct 2023",
           img:"hy2.jpg",
           pfp:"pfp.jpg",
-          btn:"arw.png"
+          btn:"arw.png",
+          link:"https://vinms.my.id/"
+        },
+        {
+          title:"The Exodus",
+          desc: "The Exodus is the founding myth of the Israelites whose narrative is spread over four books of the Pentateuch.",
+          nama: "Rifan Ghazy Pradana",
+          tanggal: "1 Nov 2023",
+          img:"hy1.png",
+          pfp:"pfp2.png",
+          btn:"arw.png",
+          link:"https://www.instagram.com/rifan.ghazy/"
         },
       ]
     }

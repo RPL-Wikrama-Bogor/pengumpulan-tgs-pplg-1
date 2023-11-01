@@ -1,5 +1,5 @@
 <template>
-<div class="position-absolute top-50 start-50 translate-middle card border-light mb-3" style="max-width: 540px;">
+<div class="card border-light mb-6 top-50 start-50 translate-middle" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img :src="img" class="img-fluid rounded-start" alt="...">
@@ -15,7 +15,7 @@
                 <p class="card-text desc"><small class="text-secondary">{{ tanggal }}</small></p>
             </div>
             <div class="col-md-4 float-start">
-                <button type="button" class="btn butn rounded-circle"><a href="https://vinms.my.id/"><img :src="btn"></a></button>
+                <button type="button" class="btn butn rounded-circle"><a :href="link"><img :src="btn"></a></button>
             </div>
         </div>
       </div>
@@ -25,10 +25,14 @@
 </template> 
 <script lang="ts">
 export default {
-    props: ['title','desc','img','pfp','nama','tanggal','btn'],
+    props: ['title','desc','img','pfp','nama','tanggal','btn','link'],
 }
 </script>
 <style scoped>
+    .card{
+        position: relative;
+        margin-left: 7rem;
+    }
     .card img{
         height: 100%;
     }
@@ -37,7 +41,7 @@ export default {
     }
     .name{
         margin: -40px 0 0 45px;
-        width: 7rem;
+        width: 8rem;
     }
     .desc{
         width: 7rem;
@@ -47,7 +51,7 @@ export default {
         background-color: #EEF3F8;
         width: 38px;
         height: 35px;
-        margin:  7px 0 0 16rem; 
+        margin:  7px 0 0 14rem; 
     }
     .butn img{
         scale: 150%;
