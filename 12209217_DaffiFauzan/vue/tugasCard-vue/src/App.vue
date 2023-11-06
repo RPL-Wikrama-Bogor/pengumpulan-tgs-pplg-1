@@ -17,7 +17,7 @@ export default {
       data: [{
         img: '/img/gr86.png',
         title: 'GR86',
-        description: "Cars such as the Toyota GR86 are few and far between. Sure, there's its mechanical twin, the Subaru BRZ, but overall, there are very few affordable rear-wheel-drive coupes available among the sea of crossovers and SUVs. The GR86 comes with a 228-hp flat-four engine. A six-speed automatic gearbox is available, but you're best off avoiding it and sticking with the car's standard six-speed manual gearbox. This small Toyota two-door's rear seats aren't there for carpooling, but rather add additional cargo space once you've filled up its trunk. The GR86 is fun to drive anywhere thanks to its sharp steering and deft handling. Even better, it's all available at a reasonable price.",
+        description: "Cars such as the Toyota GR86 are few and far between. Sure, there's its mechanical twin, the Subaru BRZ, but overall, there are very few affordable rear-wheel-drive coupes available among the sea of crossovers and SUVs. The GR86 comes with a 228-hp flat-four engine.",
         name: "Daffi Fauzan",
         date: '31 Oktober 2023'
       },
