@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Righteous&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+.container{
+    margin: 10px 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        margin: 0;
+    }
+}
