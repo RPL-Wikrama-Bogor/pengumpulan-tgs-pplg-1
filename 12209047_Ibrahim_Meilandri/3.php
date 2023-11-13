@@ -50,17 +50,17 @@ $c;
         $c = $_POST['bil_tiga'];
 
         if($a > $b && $a > $c){
-            echo "nilai terbesar adalah : ".$a;
+            echo "Nilai terbesar adalah : ".$a;
         }elseif($b > $a && $b > $c){
-            echo "nilai terbesar adalah : ".$b;
+            echo "Nilai terbesar adalah : ".$b;
         }elseif($c > $a && $c > $b){
-            echo "nilai terbesar adalah : ".$c;
+            echo "Nilai terbesar adalah : ".$c;
         }elseif($a == $b){
-            echo "nilai besar adalah :  bilangan Pertama dan Kedua yaitu ".$a;
+            echo "Nilai yang besar adalah Bilangan pertama dan Kedua yaitu ".$a;
         }elseif($a == $c){
-            echo "nilai besar adalah :  bilangan Pertama dan Ketiga yaitu ".$c;
+            echo "Nilai yang besar adalah Bilangan pertama dan ketiga yaitu ".$c;
         }elseif($b == $c){
-            echo "nilai besar adalah :  bilangan Kedua dan Ketiga yaitu ".$b;
+            echo "Nilai yang besar adalah Bilangan kedua dan ketiga yaitu ".$b;
         }
         
         else{
@@ -70,4 +70,5 @@ $c;
     ?>
 
 </body>
-</html>
+</html> 
+

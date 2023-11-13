@@ -3,7 +3,7 @@
 $tunj;
 $pjk;
 $gaji_bersih;
-$gaji_pokok;    
+$gaji_pokok;
 $nama;
 
 ?>
@@ -47,7 +47,6 @@ $nama;
     $pjk=(15 *($gaji_pokok + $tunj)) / 100;
     $gaji_bersih= $gaji_pokok + $tunj - $pjk;
     
-    echo "Nama :" . $nama."<br>";
     echo "Tunjangan :" . $tunj."<br>";
     echo "Pajak :" . $pjk."<br>";
     echo "Gaji Bersih :" . $gaji_bersih ."<br>";

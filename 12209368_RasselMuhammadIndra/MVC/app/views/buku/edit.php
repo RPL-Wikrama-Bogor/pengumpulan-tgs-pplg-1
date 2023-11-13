@@ -12,8 +12,16 @@
         <input type="text" class="form-control" id="penulis" name="penulis" value="<?= $data['buku']['penulis'] ?>">
       </div>
       <div class="form-group mb-3">
+        <label for="peminjam">Peminjam</label>
+        <input type="text" class="form-control" id="peminjam" name="peminjam" value="<?= $data['buku']['peminjam'] ?>">
+      </div>
+      <div class="form-group mb-3">
+        <label for="tgl_pinjam">Tanggal Pinjam</label>
+        <input type="datetime-local" class="form-control" id="tgl_pinjam" name="tgl_pinjam" value="<?= $data['buku']['tgl_pinjam'] ?>">
+      </div>
+      <div class="form-group mb-3">
         <label for="tgl_selesai">Tanggal Selesai</label>
-        <input type="text" class="form-control" id="tgl_selesai" name="tgl_selesai" value="<?= $data['buku']['tgl_selesai'] ?>">
+        <input type="datetime-local" class="form-control" id="tgl_selesai" name="tgl_selesai" value="<?= $data['buku']['tgl_selesai'] ?>">
       </div>
     </div>
     <div class="card-footer">
