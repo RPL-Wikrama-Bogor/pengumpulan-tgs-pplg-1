@@ -1,0 +1,6 @@
+JWT = JSON Web Token
+cara standar yang ringkas untuk mengirim informasi antar pihak dengan format json. Biasa digunakan untuk autentifikasi
+- berstandar RFC 7519
+- dienkripsi HS256 atau RS256.
+
+API itu stateless yang artinya tidak mengingat.
