@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+          .baris{
+            box-sizing: border-box;
+                    padding: 20px;
+          }
+          .kolom{
+            width: 250px;
+            height: 120px;
+            background-color: aquamarine;
+            margin: 3px;
+            box-sizing: border-box;
+                    padding: 10px;
+          }
+          .kolom1,.kolom2, .kolom3{
+            float: left;
+          }
+          .kolom4{
+            clear: left;
+            width: 100%;
+            background-color: aqua;
+          }
+        #text{
+            color: aqua;
+        }
+        p{
+            color: red;
+        }
+        .text-dua{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS INLINE -->
+    <!--  -->
+    <h1 style="font-size:30px; color:blue;">Cek berita utama ini !</h1>
+    
+    <!-- NO CSS -->
+    <h1 id="text">Cek berita utama ini !</h1>
+    <p>Ini isi dari berita</p>
+    <p class="text-dua">Ini isi dari berita</p>
+    <img src="img/^0^.jpg" alt="">
+
+    <!-- FLOAT -->
+    
+  <section class="baris">
+	   <div class="kolom kolom1">Kolom 1</div>
+	   <div class="kolom kolom2">Kolom 2</div>
+	   <div class="kolom kolom3">Kolom 3</div>
+	   <div class="kolom kolom4">Kolom 4 (float di clear)</div>
+  </section>
+
+  <!-- FLEX - BOX -->
+
+  <section class="flex-container">
+	   <div class="item">Item 1</div>
+	   <div class="item">Item 2</div>
+	   <div class="item">Item 3</div>
+	   <div class="item">Item 4</div>
+  </section>
+
+
+  <h1>Derertcode</h1>
+  <section class="baris">
+	   <div class="kolom"><h2>Judul</h2><p>Paragraf</p></div>
+	   <div class="kolom"><h2>Judul</h2><p>Paragraf</p></div>
+	   <div class="kolom"><h2>Judul</h2><p>Paragraf</p></div>
+	   <div class="kolom"><h2>Judul</h2><p>Paragraf</p></div>
+  </section>
+</body>
+</html>
+</body>
+</html>
