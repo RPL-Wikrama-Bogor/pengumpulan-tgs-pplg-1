@@ -1,0 +1,123 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    padding: 20px;
+}
+
+.nav{
+    background-color: rgb(255, 187, 61);
+    padding: 5px 5px;
+    float: right;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.nav:hover{
+    background-color: rgb(255 , 255, 0);
+}
+
+.wrap{
+    clear: right;
+}
+
+.text{
+    margin-top: 50px;
+    margin-bottom: 300px;
+}
+
+.img{
+    width: 50%;
+    float: right;
+}
+
+.card{
+    text-align: center;
+    background-color: rgb(255, 187, 61);
+    width: 362px;
+    display: inline-block;
+}
+
+.laporan{
+    margin-top: 50px;
+}
+
+.form{
+    background: rgb(211, 209, 209);
+    float: left;
+    padding: 15px;
+    width: 50%;
+}
+
+.form h3{
+    text-align: center;
+}
+
+.input{
+    width: 75%;
+}
+
+.input1{
+    width: 75%;
+    height: 100px;
+}
+
+.submit{
+    background: rgb(255, 187, 61);
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.kotak{
+    float: right;
+    width: 45%;
+    border-style: groove;
+    padding: 15px;
+    height: 25%;
+    margin-bottom: 5px;
+}
+
+.kotak p{
+    text-align: right;
+}
+
+.kotak img{
+    float: right;
+    width: 250px;
+    height: 150px;
+}
+
+footer{
+    margin-top: 500px;
+    background-color: rgb(255, 187, 61);
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .img {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .form {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .kotak {
+        width: 100%;
+    }
+}
