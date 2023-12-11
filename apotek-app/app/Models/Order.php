@@ -12,7 +12,7 @@ class Order extends Model
         'user_id',
         'medicines',
         'name_customer',
-        'total_prices',
+        'total_price',
     ];
 
     //penegasan tipe data dari migration (hasil property ini ketika diambil / diinsert
@@ -21,4 +21,12 @@ class Order extends Model
     protected $casts = [
         'medicines' => 'array',
     ];
+    
+    public function user()
+    {
+        //menghubungkan ke primary key mya
+        // dalam merupakan nama model tempat penyimpanan dari PK nya si FK yang ada di model ini
+        return $this->belongsTo(User::class);
+    }
 }
+
