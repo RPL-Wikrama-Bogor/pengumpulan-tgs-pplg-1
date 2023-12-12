@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Buatlah sebuah fungsi javascript yang menggunakan map 
+        untuk mengembalikan daftar barang dengan harga diskon 10%-->
+    
+    <script>
+        const products = [
+        {
+            name: "Laptop",
+            price: 1000
+        },
+        {
+            name: "SmartPhone",
+            price: 500
+        },
+        {
+            name: "Tablet",
+            price: 300
+        }
+        ];
+
+        function applyDiscount(products) {
+        // Menerapkan diskon 10% pada setiap produk menggunakan map
+        const discountedProducts = products.map(product => {
+            const discountedPrice = product.price * 0.9; // Menghitung harga diskon (90% dari harga asli)
+            return {
+            ...product, // Membuat objek baru yang salinan dari objek product
+            price: discountedPrice // Mengganti harga asli dengan harga diskon
+            };
+        });
+
+        return discountedProducts; // Mengembalikan daftar produk dengan harga diskon
+        }
+
+        const productsWithDiscount = applyDiscount(products); // menyimpan daftar produk dengan harga diskon
+
+        // Menampilkan daftar barang dengan harga diskon 10%
+        console.log("Daftar Barang dengan Diskon 10%:");
+        
+        productsWithDiscount.forEach(product => { //  looping setiap produk, yang berisi daftar produk dengan harga diskon.
+            console.log(`${product.name} : ${product.price}`); 
+            // Tanda $ dan tanda kurung kurawal digunakan untuk memasukkan nilai nama produk dan harga diskon ke dalam string yang akan dicetak.
+        });
+        
+    </script>
+</body>
+</html>     
