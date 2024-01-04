@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="getBooks"></div>
+
+    <form id="addBooks">
+        <h5>Add Book</h5>
+        <input type="text" name="name" id="name" placeholder="name">
+        <input type="text" name="author" id="author" placeholder="author">
+        <input type="text" name="year" id="year" placeholder="year">
+        <input type="number" name="page_count" id="page_count" placeholder="page_count">
+        <input type="text" name="publisher" id="publisher" placeholder="publisher">
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        const url = "http://localhost:2000";
+    </script>
+    <script src="./javascript/getBooks.js"></script>
+    <script src="./javascript/addBooks.js"></script>
+</body>
+</html>

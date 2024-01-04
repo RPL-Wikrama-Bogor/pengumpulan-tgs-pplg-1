@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Labs</title>
+</head>
+<body>
+    
+    <script>
+        // ------------ variable ------------
+        // var cakupan nya global = bisa dipanggil dliuar function
+        // let cakupan nya blok = jika dibuat di satu function hanya bisa dipanggil di function tersebut = jika diluar hanya bisa diluar function
+        // var dan let bisa diubah
+        // const tidak bisa berubah
+        let number = 7; // integer
+        console.log(number) 
+
+        var text1 = 'Ini text pertama menggunakan single quotes'; // bisa memanggil double didalamnya
+        console.log(text1)
+
+        let text2 = "Ini text kedua menggunakan double quotes"; // bisa memanggil single didalamnya
+        console.log(text2)
+
+        const text3 = `Ini text ketiga menggunakan single backticks ${text2}` ; // backtick bisa memanggil variable didalamnya
+        console.log(text3)
+
+        let boolean = true; // hanya ada 2 nilai yaitu true dan false
+        console.log(boolean)
+
+        let tidakAdaNilai = null;
+        console.log(tidakAdaNilai)
+
+        let nilaiBelumDiisi;
+        console.log(nilaiBelumDiisi);
+
+        let array = ['apple', 'orange', 'watermelon']
+        console.log(array)
+
+        function tambah(a,b) {
+            console.log(a+b)
+        }
+
+        // ------------ aritmatika ------------
+        let number1 = 10;
+        let number2 = 4;
+        console.log(number1 + number2)
+        console.log(number1 - number2)
+        console.log(number1 * number2)
+        console.log(number1 / number2)
+        console.log(number1 % number2)
+
+        // ------------ operator perbandingan ------------
+        console.log(number1 == number2)
+        console.log(number1 != number2)
+        console.log(number1 < number2)
+        console.log(number1 > number2)
+        console.log(number1 <= number2)
+        console.log(number1 >= number2)
+
+        // ------------ operator logika ------------
+        console.log(number1 != number2 && number1 > number2)
+        console.log(number1 == number2 || number1 != number2)
+
+        // ------------ operator kondisi ------------
+        number1 = number1 + number2 // number1 = 10 + 4
+        console.log(number1)
+        number1 += number2
+        console.log(number1)
+        
+        // ------------ operator null checking ------------
+        let object = null;
+        let cekObject = object?.properti;
+        console.log(cekObject)
+
+        let siswa = {
+            nama: "Fetzz",
+            usia: 17,
+            asal: "Gaza"
+        }
+        console.log(siswa.nama)
+
+         let cekUmur = (siswa.usia >= 18) ? "Dewasa" : "Anak Anak"
+         console.log(cekUmur)
+
+         if(siswa.usia >=18) {
+            console.log("Dewasa")
+        } else if (siswa.usia >= 9){
+            console.log("Remaja")
+        } else {
+            console.log("Bocil")
+        }
+
+        switch (siswa.asal) {
+            case "Gaza":
+                console.log("Daerah")
+            break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const _fruits = new Array('apel', 'pisang', 'semangka') // menambah dan menghapus element dalam array
+        _fruits.push("jeruk") // menambah "jeruk" ke akhir
+        console.log(_fruits)
+
+        _fruits.pop() // menghapus element terakhir pada array
+        console.log(_fruits)
+
+        _fruits.shift() // menghapus element pertama pada array
+        console.log(_fruits)
+
+        // memindahkan array pertama ke terakhir menggunakan array.shift dan array.push
+
+        _fruits.slice() // menghaslkan array baru
+        _fruits.splice(1,0,"melon") // menambahkan element ditengah array // tidak menciptakan array baru
+
+        // _fruits.splice(1,0) // index ke berapa dan jumlah yang mau dihapus berapa
+        console.log(_fruits)
+        console.log(_fruits.length) // menghitung jumlah panjang array
+        console.log(_fruits.indexOf('pisang')) // mengembalikan nilai index element
+        console.log(_fruits.indexOf('jeruk'))
+        // jika tidak ditemukan akan bernilai -1
+
+        const _number = new Array(0,1,2,3,4) // membuat salinan potongan array
+        const _newNumber = _number.slice(2,4)
+        console.log(_newNumber)
+
+        // menghubungkan 2 array
+        const _fruits2 = ['lengkeng', 'melon']
+        const _mergeFruits = _fruits.concat(_fruits2)
+        console.log(_mergeFruits)
+
+        // akses property
+        console.log(_person.name)
+        console.log(_person['age'])
+
+        // menghapus property object
+        console.log('sebelum menghapus: ')
+        console.log(_person)
+        delete _person.isMaried
+        console.log('sesudah menghapus: ')
+        console.log(_person)
+        
+        // properti shorthand
+        const _jenis  = 'persegi'
+        const _panjang = "30"
+        const _lebar = "30"
+
+        const _bangunDatar = {_jenis, _panjang, _lebar}
+        console.log(_bangunDatar)
+
+        // properti existence, memeriksa properti dalam object
+        let _student = {
+            name : "Fetzz",
+            age : 17,
+            className : "PPLG XI 2"
+        }
+
+        console.log("name" in _student)
+        console.log("genre" in _student)
+        console.log(_student.hasOwnProperti("name"))
+        console.log(_student.hasOwnProperti("genre"))
+    </script>
+</body>
+</html>

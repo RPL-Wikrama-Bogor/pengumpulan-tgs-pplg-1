@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Buatlah sebuah fungsi javascript yang menggunakan filter untuk mengembalikan/menampilkan 
+    daftar buku denga genre "Fiction" -->
+
+    <script>
+        // Membuat array 'books' yang berisi daftar buku dengan objek-objek
+        const books = [
+            { 
+                title: "Laskar Pelangi", 
+                authhor: "Andrea Hirata",
+                genre: "Fiction",
+                year: 2005
+            },
+            { 
+                title: "Bumi Manusia", 
+                authhor: "Pramoedya Ananta Toer",
+                genre: "Fiction",
+                year: 1980
+            },
+            { 
+                title: "Dear Nathan", 
+                author: "Erisca Febriani",
+                genre: "Romance",
+                year: 2017 
+            },
+        ];
+
+        
+        // Membuat fungsi 'filterBooksByGenre' yang menerima dua argumen: array 'books' dan 'genre' yang akan difilter
+        function filterBooksByGenre(books, genre) {
+            // Menggunakan metode 'filter' untuk menghasilkan array yang hanya berisi buku dengan genre yang sesuai
+            const filteredBooks = books.filter(book => book.genre === genre);
+            return filteredBooks; // Mengembalikan hasil filter
+        }
+        
+        // Memanggil fungsi 'filterBooksByGenre' untuk menghasilkan array 'fictionBooks' yang berisi buku dengan genre "Fiction"
+        const fictionBooks = filterBooksByGenre(books, "Fiction");
+        
+        // Mencetak pesan awal menggunakan 'console.log'
+        console.log("Buku dengan genre 'Fiction':");
+        
+        // Menggunakan metode 'forEach' untuk mengiterasi melalui array 'fictionBooks' dan mencetak judul buku
+        fictionBooks.forEach(book => {
+            console.log(book.title); // Mencetak judul buku ke console
+        });
+  
+
+    </script>
+</body>
+</html>
