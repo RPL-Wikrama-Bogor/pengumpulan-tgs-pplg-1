@@ -10,6 +10,7 @@ class Medicine extends Model
     use HasFactory;
 
     //propert yang digunakan untuk menyimpan nama-nama column yang bisa diisi valuenya
+    
     protected $fillable = [
         'type',
         'name',

@@ -21,6 +21,8 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="">Dashboard</a>
                   </li>
+                  @if (Auth::check())
+                    @if (Auth::user()->role == "admin")
 
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,13 +37,22 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Pembelian</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('order.data') }}">Pembelian</a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('user.home')}}">Kelola Akun</a>
-                  </li>
-
+                  </li>   
+                  @else
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ route('kasir.order.index') }}">Pembelian</a>
+                  </li>    
+                  @endif
+                  {{-- @if (Auth::check()) --}}
+                    <li class="nav-item">
+                      <a href="{{ route('logout') }}" class="nav-link">Logout</a>
+                    </li>
+                  @endif
                 </ul>
               </div>
             </div>
