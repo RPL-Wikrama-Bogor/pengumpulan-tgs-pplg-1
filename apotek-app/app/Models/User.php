@@ -43,4 +43,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function order()
+    {
+        //membuat relasi ke table lain dengan tipe one to many 
+        //dalam kurung merupakan nama modelnya yang akan di sambungkan (tempat FK)
+        return $this->hasMany(Order::class);
+    }
 }

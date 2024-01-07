@@ -4,9 +4,30 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function loginAuth(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required',
+        ]);
+
+        $user = $request->only(['email', 'password']);
+        if (Auth::attempt($user)) {
+            return redirect()->route('home.page');
+        } else {
+            return redirect()->back()->with('failed', 'Proses login gagal, silahkan coba lagi dengan data yang benar!');
+        } 
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login')->with('logout', 'Anda telah berhasil logout!');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -88,8 +109,9 @@ class UserController extends Controller
         ];
 
         if($request->filled('password')){
-            $password['password'] = bcrypt($request->password);
-        }
+            $DataBaru['password'] = bcrypt($request->password);
+        };
+
 
         User::where('id', $id)->update($DataBaru);
         
@@ -105,7 +127,6 @@ class UserController extends Controller
 
         return redirect()->back()->with('deleted', 'Berhasil menghapus data!');
     }
-    
 
 
 }

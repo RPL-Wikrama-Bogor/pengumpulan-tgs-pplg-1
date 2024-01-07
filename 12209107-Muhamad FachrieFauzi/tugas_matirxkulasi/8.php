@@ -39,7 +39,7 @@ $bilangan_ratusan;
 
     echo "Bilangan satuan ". $bilangan_satuan. "<br>";
     echo "Bilangan Puluhan ". $bilangan_puluhan . "<br>";
-    echo "Bilangan Satusan ". $bilangan_ratusan ; 
+    echo "Bilangan Ratusan ". $bilangan_ratusan ; 
 
  }
 ?>

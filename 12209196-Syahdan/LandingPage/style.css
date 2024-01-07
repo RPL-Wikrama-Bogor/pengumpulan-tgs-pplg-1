@@ -1,0 +1,64 @@
+/* Reset some default styles for better consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Apply styles to the h1 element */
+h1 {
+    color: #333;
+    text-align: center; /* Center the heading */
+    margin-top: 20px; /* Add some space on top */
+}
+
+/* Apply styles to the button element */
+button {
+    background-color: #c3ff00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Apply styles to the image element */
+img {
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Apply styles to the p elements within the body */
+p {
+    margin: 10px 0;
+    padding: 0 20px; /* Add some space on the sides */
+}
+
+/* Apply styles to the .baris section */
+.baris {
+    display: flex; /* Use flexbox for columns */
+    justify-content: space-between; /* Space columns evenly */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+/* Apply styles to the .kolom class */
+.kolom {
+    flex: 0 1 calc(33.33% - 10px); /* Set column width with spacing */
+    background-color: aquamarine;
+    margin: 5px; /* Increase margin for spacing */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center; /* Center content in columns */
+}
+
+/* Apply styles to the .kolom4 class */
+.kolom4 {
+    flex-basis: 100%; /* Full width on smaller screens */
+    background-color: rgb(51, 255, 0);
+}

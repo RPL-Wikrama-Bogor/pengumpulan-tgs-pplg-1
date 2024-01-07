@@ -12,8 +12,11 @@ class MedicineController extends Controller
      */
     public function index()
     {
-        $medicines = Medicine::all();
+        $medicines = Medicine::all(); //hasilnya array multi dimensi
         return view('medicine.index', compact('medicines'));
+
+        //menampilkan halaman blade
+        //sesuaikkan nama folder dengan nama file
     }
 
     /**
